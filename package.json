@@ -1,0 +1,36 @@
+{
+  "name": "ffvideo-plugins",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/425776024/ffvideo-plugins.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "npm --prefix ffvideo run build",
+    "dev": "npm --prefix ffvideo run dev",
+    "start": "npm --prefix ffvideo start",
+    "test": "npm --prefix ffvideo test"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "@types/node": "^22.13.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "esbuild": "0.25.11",
+    "gsap": "3.15.0",
+    "mediabunny": "1.61.0",
+    "onnxruntime-web": "1.30.0",
+    "parse5": "8.0.0",
+    "pinyin-pro": "3.28.1",
+    "prettier": "^3.9.9",
+    "typescript": "^5.7.3",
+    "vite": "6.2.6",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.2"
+  }
+}

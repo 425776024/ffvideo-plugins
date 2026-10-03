@@ -1,0 +1,4 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["src/**/*.ts", "src/**/*.vue", "../packages/**/*.d.mts", "../packages/render/**/*.ts", "../packages/media/**/*.ts", "../src/editor/tts-jobs.ts", "../src/editor/template-export.ts"]
+}

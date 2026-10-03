@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "ffvideo": { "command": "ffvideo", "args": ["--mcp", "--port", "0"] }
+  }
+}

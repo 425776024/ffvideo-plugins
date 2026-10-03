@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="{{heading}}">
+  <defs><linearGradient id="paper" x2="0" y2="1"><stop stop-color="#e7f4f5"/><stop offset="1" stop-color="#cddfe9"/></linearGradient></defs>
+  <rect width="720" height="720" fill="url(#paper)"/>
+  <path d="M148 520 C250 430 320 420 360 292 S510 180 592 232" fill="none" stroke="#649bac" stroke-width="10" stroke-linecap="round" stroke-dasharray="12 20"/>
+  <g id="step-0"><circle cx="148" cy="520" r="72" fill="#164b65"/><path d="M116 520h64m-32-32v64" stroke="#d6f6ec" stroke-width="10" stroke-linecap="round"/></g>
+  <g id="step-1"><circle cx="360" cy="292" r="72" fill="#f7c882"/><path d="m328 292 24 24 40-48" fill="none" stroke="#624b31" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g id="step-2"><circle cx="592" cy="232" r="56" fill="#238c89"/><path d="m572 232 16 16 26-32" fill="none" stroke="#f3fbf8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="54" y="86" fill="#143c52" font-family="system-ui,sans-serif" font-size="32">{{heading}}</text>
+</svg>

@@ -1,0 +1,38 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtemp,rm,writeFile,readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { backgroundPng } from '../server/drafts.mjs';
+import { registerMaterial,listMaterials,materialBrief,useMaterial } from '../server/materials.mjs';
+import { resolveDraftVisuals } from '../server/visual-assets.mjs';
+const credit={title:'Coffee cup with latte',author:'Photographer',license:'CC BY 4.0',sourceUrl:'https://commons.wikimedia.org/wiki/File:Coffee-cup.png',licenseUrl:'https://creativecommons.org/licenses/by/4.0/'};
+test('a reusable source survives reload, answers a new synonymous query offline, and never shares mutable work files',async t=>{
+ const root=await mkdtemp(join(tmpdir(),'ffvideo-materials-'));t.after(()=>rm(root,{recursive:true,force:true}));
+ const cacheDir=join(root,'cache'),source=join(root,'coffee.png'),bytes=backgroundPng('#87644b',480,640);await writeFile(source,bytes);
+ const [first,second]=await Promise.all([registerMaterial(cacheDir,{path:source,kind:'image',credit,searchQuery:'coffee cup'},{topic:'咖啡摄影'}),registerMaterial(cacheDir,{path:source,kind:'image',credit,searchQuery:'cup latte'},{topic:'咖啡构图'})]);
+ assert.equal(first.id,second.id);let inventory=await listMaterials(cacheDir,{topic:'咖啡摄影'});assert.equal(inventory.length,1);
+ assert.equal(inventory[0].queries.length,2);assert.equal(inventory[0].topics.length,2);
+ assert.equal((await listMaterials(cacheDir,{topic:'咖啡摄影',relevantOnly:true})).length,1);
+ assert.equal((await listMaterials(cacheDir,{topic:'随机的无关话题',relevantOnly:true})).length,0,'An unrelated topic must not be steered by local inventory');
+ const recipe={title:'新的咖啡讲解',tags:['摄影'],scenes:[{heading:'杯沿',body:'观察真实杯沿',visualQuery:'coffee mug'}]};
+ let calls=0;const fetchImpl=async()=>{calls++;throw Error('Network must not be used for a stocked subject');};
+ const began=performance.now();const resolved=await resolveDraftVisuals(recipe,join(root,'new-work'),{cacheDir,fetchImpl,visualPreference:'photo-first'});
+ assert.equal(calls,0);assert.equal(resolved.length,1);assert.equal(resolved[0].materialId,first.id);assert.deepEqual(await readFile(resolved[0].path),bytes);
+ assert.ok(performance.now()-began<2000,'A small local source must not wait for remote search timeouts');
+ await writeFile(resolved[0].path,'User changed an independent draft file');
+ const again=await useMaterial(cacheDir,inventory[0],join(root,'another-work'),0,'coffee cup');assert.deepEqual(await readFile(again.path),bytes);
+ const brief=materialBrief(inventory);assert.equal(brief[0].subject,credit.title);assert(!JSON.stringify(brief).includes(root));
+ const unrelated=await resolveDraftVisuals({...recipe,scenes:[{...recipe.scenes[0],visualQuery:'papaya fruit'}]},join(root,'papaya'),{cacheDir,allowRemote:false,fetchImpl});
+ assert.equal(unrelated.length,0);assert.equal(calls,0,'Unrelated inventory is never substituted merely to avoid a miss');
+});
+test('a corrupted inventory file is not published and cancellable reads stop before copying',async t=>{
+ const root=await mkdtemp(join(tmpdir(),'ffvideo-material-safety-'));t.after(()=>rm(root,{recursive:true,force:true}));
+ const source=join(root,'source.png'),cacheDir=join(root,'cache');await writeFile(source,backgroundPng('#87644b',480,640));
+ const info=await registerMaterial(cacheDir,{path:source,kind:'image',credit,searchQuery:'coffee cup'});
+ const original=await readFile(join(cacheDir,'materials',info.id+info.extension));const corrupt=Buffer.from(original);corrupt[100]^=1;
+ await writeFile(join(cacheDir,'materials',info.id+info.extension),corrupt);
+ await assert.rejects(useMaterial(cacheDir,info,join(root,'new-work'),0,'coffee cup'),/已损坏/);
+ const controller=new AbortController();controller.abort();await assert.rejects(listMaterials(cacheDir,{signal:controller.signal}),{name:'AbortError'});
+ const bad=await registerMaterial(cacheDir,{path:source,kind:'image',credit:{...credit,license:'All rights reserved'}});assert.equal(bad,null);
+});

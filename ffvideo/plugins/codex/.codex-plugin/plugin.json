@@ -1,0 +1,26 @@
+{
+  "name": "ffvideo-local",
+  "version": "0.2.0",
+  "description": "Generate voiced topic videos and watch a read-only topic and history library.",
+  "author": {
+    "name": "ffclip"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "ffvideo",
+    "shortDescription": "Voiced videos for your interests",
+    "longDescription": "Generate at least five related drafts with sound, watch and comment in a viewing feed, and render selected works to video.",
+    "developerName": "ffclip",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create five different narrated videos about a topic I am interested in and open the viewing feed.",
+      "Export this video from my ffvideo feed."
+    ],
+    "brandColor": "#A9FF6B"
+  }
+}

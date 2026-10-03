@@ -1,0 +1,3949 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "science-explainer",
+      "name": "现象驱动科普",
+      "category": "科普",
+      "description": "从一个可观察的现象解释原理，再说明范围与验证方式。可配实拍现象或简明示意图。",
+      "useCases": [
+        "科普",
+        "科学",
+        "实验"
+      ],
+      "keywords": [
+        "科普",
+        "科学",
+        "实验",
+        "物理",
+        "为什么",
+        "science"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "explain",
+        "visualStyle": "mixed",
+        "visualTheme": "浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "pacing": "提问快，解释慢，边界独立说明",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "phenomenon",
+          "heading": "先看现象",
+          "purpose": "用具体观察进入问题。",
+          "seconds": 6
+        },
+        {
+          "id": "mechanism",
+          "heading": "拆开原理",
+          "purpose": "解释一个因果关系。",
+          "seconds": 9
+        },
+        {
+          "id": "boundary",
+          "heading": "说清边界",
+          "purpose": "指出影响结果的条件。",
+          "seconds": 6
+        },
+        {
+          "id": "observation",
+          "heading": "再观察一次",
+          "purpose": "给一个可复查的观察方向。",
+          "seconds": 7
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "气球为什么能吸起小纸片",
+          "maxLength": 80
+        },
+        {
+          "key": "phenomenon",
+          "label": "观察到的现象",
+          "required": true,
+          "example": "摩擦过干燥毛衣的气球能吸起小纸片。",
+          "maxLength": 600
+        },
+        {
+          "key": "mechanism",
+          "label": "核心原理",
+          "required": true,
+          "example": "摩擦使电荷重新分布，带电气球使附近纸片中的电荷发生偏移，于是产生吸引。",
+          "maxLength": 600
+        },
+        {
+          "key": "boundary",
+          "label": "适用范围与限制",
+          "required": true,
+          "example": "潮湿环境使电荷更容易消散，效果可能变弱。",
+          "maxLength": 600
+        },
+        {
+          "key": "observation",
+          "label": "观察任务",
+          "required": true,
+          "example": "换一种布料，比较同样大小的纸片被吸起的情况。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "static electricity balloon paper",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{phenomenon}}{{mechanism}}{{boundary}}{{observation}}",
+        "tags": [
+          "科普",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "visualStyle": "mixed",
+        "scenes": [
+          {
+            "heading": "先看现象",
+            "body": "{{phenomenon}}",
+            "seconds": 6,
+            "visualPrompt": "桌面近景展示{{phenomenon}}，物体之间的距离清晰可见。",
+            "visualQuery": "{{visualSubject}} demonstration close up"
+          },
+          {
+            "heading": "拆开原理",
+            "body": "{{mechanism}}",
+            "seconds": 9,
+            "visualPrompt": "用简明关系图表现{{mechanism}}，箭头与物体分开，不预制实验结果。",
+            "visualQuery": "{{visualSubject}} diagram"
+          },
+          {
+            "heading": "说清边界",
+            "body": "{{boundary}}",
+            "seconds": 6,
+            "visualPrompt": "对照环境条件，用图示承载{{boundary}}。",
+            "visualQuery": "{{visualSubject}} comparison"
+          },
+          {
+            "heading": "再观察一次",
+            "body": "{{observation}}",
+            "seconds": 7,
+            "visualPrompt": "材料与记录本俯拍，表现{{observation}}。",
+            "visualQuery": "{{visualSubject}} materials tabletop"
+          }
+        ]
+      },
+      "example": {
+        "topic": "气球为什么能吸起小纸片",
+        "values": {
+          "topic": "气球为什么能吸起小纸片",
+          "phenomenon": "摩擦过干燥毛衣的气球能吸起小纸片。",
+          "mechanism": "摩擦使电荷重新分布，带电气球使附近纸片中的电荷发生偏移，于是产生吸引。",
+          "boundary": "潮湿环境使电荷更容易消散，效果可能变弱。",
+          "observation": "换一种布料，比较同样大小的纸片被吸起的情况。",
+          "visualSubject": "static electricity balloon paper"
+        },
+        "recipe": {
+          "title": "气球为什么能吸起小纸片",
+          "narration": "摩擦过干燥毛衣的气球能吸起小纸片。摩擦使电荷重新分布，带电气球使附近纸片中的电荷发生偏移，于是产生吸引。潮湿环境使电荷更容易消散，效果可能变弱。换一种布料，比较同样大小的纸片被吸起的情况。",
+          "tags": [
+            "科普",
+            "气球为什么能吸起小纸片"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕气球为什么能吸起小纸片，浅色背景，清晰关系图、步骤箭头或分类示意。",
+          "visualStyle": "mixed",
+          "scenes": [
+            {
+              "heading": "先看现象",
+              "body": "摩擦过干燥毛衣的气球能吸起小纸片。",
+              "seconds": 6,
+              "visualPrompt": "桌面近景展示摩擦过干燥毛衣的气球能吸起小纸片。，物体之间的距离清晰可见。",
+              "visualQuery": "static electricity balloon paper demonstration close up"
+            },
+            {
+              "heading": "拆开原理",
+              "body": "摩擦使电荷重新分布，带电气球使附近纸片中的电荷发生偏移，于是产生吸引。",
+              "seconds": 9,
+              "visualPrompt": "用简明关系图表现摩擦使电荷重新分布，带电气球使附近纸片中的电荷发生偏移，于是产生吸引。，箭头与物体分开，不预制实验结果。",
+              "visualQuery": "static electricity balloon paper diagram"
+            },
+            {
+              "heading": "说清边界",
+              "body": "潮湿环境使电荷更容易消散，效果可能变弱。",
+              "seconds": 6,
+              "visualPrompt": "对照环境条件，用图示承载潮湿环境使电荷更容易消散，效果可能变弱。。",
+              "visualQuery": "static electricity balloon paper comparison"
+            },
+            {
+              "heading": "再观察一次",
+              "body": "换一种布料，比较同样大小的纸片被吸起的情况。",
+              "seconds": 7,
+              "visualPrompt": "材料与记录本俯拍，表现换一种布料，比较同样大小的纸片被吸起的情况。。",
+              "visualQuery": "static electricity balloon paper materials tabletop"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "talking-point",
+      "name": "观点口播",
+      "category": "口播",
+      "description": "用结论、理由、个人例子和边界讲清一个观点。可用旁白配相关画面，或替换为用户授权的真人片段。",
+      "useCases": [
+        "口播",
+        "观点",
+        "经验分享"
+      ],
+      "keywords": [
+        "口播",
+        "观点",
+        "经验分享",
+        "表达",
+        "talking"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "cinema",
+        "visualStyle": "photo",
+        "visualTheme": "全幅主体画面，环境广角与细节交替，色彩自然。",
+        "pacing": "结论先行，例子展开，结尾留边界",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "claim",
+          "heading": "先说结论",
+          "purpose": "开头直接给出中心观点。",
+          "seconds": 6
+        },
+        {
+          "id": "reason",
+          "heading": "给出理由",
+          "purpose": "用一条理由支撑观点。",
+          "seconds": 7
+        },
+        {
+          "id": "personalExample",
+          "heading": "落到例子",
+          "purpose": "使用用户提供的具体经历。",
+          "seconds": 9
+        },
+        {
+          "id": "limit",
+          "heading": "留下边界",
+          "purpose": "区分个人经验与通用结论。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "先把灵感记成一句话",
+          "maxLength": 80
+        },
+        {
+          "key": "claim",
+          "label": "想表达的观点",
+          "required": true,
+          "example": "我习惯先用一句话记录灵感，再决定要不要展开。",
+          "maxLength": 600
+        },
+        {
+          "key": "reason",
+          "label": "支持理由",
+          "required": true,
+          "example": "一句话能保留最重要的问题，回看时不容易迷失在细节里。",
+          "maxLength": 600
+        },
+        {
+          "key": "personalExample",
+          "label": "自己的具体例子",
+          "required": true,
+          "example": "想到视频主题时，我先写：这个现象为什么让人意外？",
+          "maxLength": 600
+        },
+        {
+          "key": "limit",
+          "label": "适用边界",
+          "required": true,
+          "example": "这只是我的习惯；需要精确数据时，我会补上来源和细节。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "notebook pencil desk",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{claim}}{{reason}}{{personalExample}}{{limit}}",
+        "tags": [
+          "口播",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，全幅主体画面，环境广角与细节交替，色彩自然。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先说结论",
+            "body": "{{claim}}",
+            "seconds": 6,
+            "visualPrompt": "笔记页与笔尖近景承载{{claim}}，不模拟数字人。",
+            "visualQuery": "{{visualSubject}} close up"
+          },
+          {
+            "heading": "给出理由",
+            "body": "{{reason}}",
+            "seconds": 7,
+            "visualPrompt": "一条笔记被标记的相关画面，表现{{reason}}。",
+            "visualQuery": "{{visualSubject}} writing detail"
+          },
+          {
+            "heading": "落到例子",
+            "body": "{{personalExample}}",
+            "seconds": 9,
+            "visualPrompt": "工作桌面镜头承载{{personalExample}}；真人画面需用户提供。",
+            "visualQuery": "{{visualSubject}} creative workspace"
+          },
+          {
+            "heading": "留下边界",
+            "body": "{{limit}}",
+            "seconds": 6,
+            "visualPrompt": "合上的笔记本慢慢拉远，结尾对应{{limit}}。",
+            "visualQuery": "{{visualSubject}} wide view"
+          }
+        ]
+      },
+      "example": {
+        "topic": "先把灵感记成一句话",
+        "values": {
+          "topic": "先把灵感记成一句话",
+          "claim": "我习惯先用一句话记录灵感，再决定要不要展开。",
+          "reason": "一句话能保留最重要的问题，回看时不容易迷失在细节里。",
+          "personalExample": "想到视频主题时，我先写：这个现象为什么让人意外？",
+          "limit": "这只是我的习惯；需要精确数据时，我会补上来源和细节。",
+          "visualSubject": "notebook pencil desk"
+        },
+        "recipe": {
+          "title": "先把灵感记成一句话",
+          "narration": "我习惯先用一句话记录灵感，再决定要不要展开。一句话能保留最重要的问题，回看时不容易迷失在细节里。想到视频主题时，我先写：这个现象为什么让人意外？这只是我的习惯；需要精确数据时，我会补上来源和细节。",
+          "tags": [
+            "口播",
+            "先把灵感记成一句话"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕先把灵感记成一句话，全幅主体画面，环境广角与细节交替，色彩自然。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先说结论",
+              "body": "我习惯先用一句话记录灵感，再决定要不要展开。",
+              "seconds": 6,
+              "visualPrompt": "笔记页与笔尖近景承载我习惯先用一句话记录灵感，再决定要不要展开。，不模拟数字人。",
+              "visualQuery": "notebook pencil desk close up"
+            },
+            {
+              "heading": "给出理由",
+              "body": "一句话能保留最重要的问题，回看时不容易迷失在细节里。",
+              "seconds": 7,
+              "visualPrompt": "一条笔记被标记的相关画面，表现一句话能保留最重要的问题，回看时不容易迷失在细节里。。",
+              "visualQuery": "notebook pencil desk writing detail"
+            },
+            {
+              "heading": "落到例子",
+              "body": "想到视频主题时，我先写：这个现象为什么让人意外？",
+              "seconds": 9,
+              "visualPrompt": "工作桌面镜头承载想到视频主题时，我先写：这个现象为什么让人意外？；真人画面需用户提供。",
+              "visualQuery": "notebook pencil desk creative workspace"
+            },
+            {
+              "heading": "留下边界",
+              "body": "这只是我的习惯；需要精确数据时，我会补上来源和细节。",
+              "seconds": 6,
+              "visualPrompt": "合上的笔记本慢慢拉远，结尾对应这只是我的习惯；需要精确数据时，我会补上来源和细节。。",
+              "visualQuery": "notebook pencil desk wide view"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "micro-lesson",
+      "name": "分步微教学",
+      "category": "教学",
+      "description": "围绕一个学习目标展示工具、步骤、检查与练习。需相应操作画面或原创步骤图示。",
+      "useCases": [
+        "教学",
+        "教程",
+        "摄影构图"
+      ],
+      "keywords": [
+        "教学",
+        "教程",
+        "摄影构图",
+        "学会",
+        "步骤",
+        "tutorial",
+        "lesson"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video",
+        "svg"
+      ],
+      "style": {
+        "presentationStyle": "explain",
+        "visualStyle": "mixed",
+        "visualTheme": "浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "pacing": "目标短，步骤慢，检查与练习明确",
+        "durationSeconds": 32,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。 指定操作幕使用内置SVG步骤图，通过确定时间的图形容器预览与导出。"
+      },
+      "structure": [
+        {
+          "id": "goal",
+          "heading": "只学一件事",
+          "purpose": "说明目标与完成标准。",
+          "seconds": 5
+        },
+        {
+          "id": "preparation",
+          "heading": "准备工具",
+          "purpose": "交代操作前的准备。",
+          "seconds": 5
+        },
+        {
+          "id": "stepOne",
+          "heading": "找到主体",
+          "purpose": "慢速展示第一步。",
+          "seconds": 7
+        },
+        {
+          "id": "stepTwo",
+          "heading": "移动并检查",
+          "purpose": "展示调整和检查点。",
+          "seconds": 9
+        },
+        {
+          "id": "practice",
+          "heading": "留一个练习",
+          "purpose": "邀请用户独立复现。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "用三分线练习画面构图",
+          "maxLength": 80
+        },
+        {
+          "key": "goal",
+          "label": "学习目标",
+          "required": true,
+          "example": "练习把主体移到三分线附近，再比较画面的感觉。",
+          "maxLength": 600
+        },
+        {
+          "key": "preparation",
+          "label": "准备材料",
+          "required": true,
+          "example": "准备一张能移动构图的照片，或在相机中打开三分网格。",
+          "maxLength": 600
+        },
+        {
+          "key": "stepOne",
+          "label": "第一步",
+          "required": true,
+          "example": "先找到照片里最想让观众注意的主体。",
+          "maxLength": 600
+        },
+        {
+          "key": "stepTwo",
+          "label": "第二步与检查",
+          "required": true,
+          "example": "把主体从正中移到三分线附近，检查边缘是否切掉重要部分。",
+          "maxLength": 600
+        },
+        {
+          "key": "practice",
+          "label": "练习任务",
+          "required": true,
+          "example": "保留居中和偏移两版，写下更喜欢哪一张以及原因。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "photography composition grid landscape",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{goal}}{{preparation}}{{stepOne}}{{stepTwo}}{{practice}}",
+        "tags": [
+          "教学",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "visualStyle": "mixed",
+        "scenes": [
+          {
+            "heading": "只学一件事",
+            "body": "{{goal}}",
+            "seconds": 5,
+            "visualPrompt": "一张图片配简明网格，表现{{goal}}。",
+            "visualQuery": "{{visualSubject}} subject grid"
+          },
+          {
+            "heading": "准备工具",
+            "body": "{{preparation}}",
+            "seconds": 5,
+            "visualPrompt": "工具与操作位置近景，表现{{preparation}}，不假称打开了用户软件。",
+            "visualQuery": "{{visualSubject}} camera"
+          },
+          {
+            "heading": "找到主体",
+            "body": "{{stepOne}}",
+            "seconds": 7,
+            "visualPrompt": "淡色标记强调{{stepOne}}，其他区域降低对比。",
+            "visualQuery": "{{visualSubject}} framing"
+          },
+          {
+            "heading": "移动并检查",
+            "body": "{{stepTwo}}",
+            "seconds": 9,
+            "visualPrompt": "前后构图示意对应{{stepTwo}}，只保留一组比较。",
+            "visualQuery": "{{visualSubject}} comparison grid"
+          },
+          {
+            "heading": "留一个练习",
+            "body": "{{practice}}",
+            "seconds": 6,
+            "visualPrompt": "两个版本与空白观察笔记并排，表现{{practice}}。",
+            "visualQuery": "{{visualSubject}} comparison"
+          }
+        ]
+      },
+      "example": {
+        "topic": "用三分线练习画面构图",
+        "values": {
+          "topic": "用三分线练习画面构图",
+          "goal": "练习把主体移到三分线附近，再比较画面的感觉。",
+          "preparation": "准备一张能移动构图的照片，或在相机中打开三分网格。",
+          "stepOne": "先找到照片里最想让观众注意的主体。",
+          "stepTwo": "把主体从正中移到三分线附近，检查边缘是否切掉重要部分。",
+          "practice": "保留居中和偏移两版，写下更喜欢哪一张以及原因。",
+          "visualSubject": "photography composition grid landscape"
+        },
+        "recipe": {
+          "title": "用三分线练习画面构图",
+          "narration": "练习把主体移到三分线附近，再比较画面的感觉。准备一张能移动构图的照片，或在相机中打开三分网格。先找到照片里最想让观众注意的主体。把主体从正中移到三分线附近，检查边缘是否切掉重要部分。保留居中和偏移两版，写下更喜欢哪一张以及原因。",
+          "tags": [
+            "教学",
+            "用三分线练习画面构图"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕用三分线练习画面构图，浅色背景，清晰关系图、步骤箭头或分类示意。",
+          "visualStyle": "mixed",
+          "scenes": [
+            {
+              "heading": "只学一件事",
+              "body": "练习把主体移到三分线附近，再比较画面的感觉。",
+              "seconds": 5,
+              "visualPrompt": "一张图片配简明网格，表现练习把主体移到三分线附近，再比较画面的感觉。。",
+              "visualQuery": "photography composition grid landscape subject grid"
+            },
+            {
+              "heading": "准备工具",
+              "body": "准备一张能移动构图的照片，或在相机中打开三分网格。",
+              "seconds": 5,
+              "visualPrompt": "工具与操作位置近景，表现准备一张能移动构图的照片，或在相机中打开三分网格。，不假称打开了用户软件。",
+              "visualQuery": "photography composition grid landscape camera"
+            },
+            {
+              "heading": "找到主体",
+              "body": "先找到照片里最想让观众注意的主体。",
+              "seconds": 7,
+              "visualPrompt": "淡色标记强调先找到照片里最想让观众注意的主体。，其他区域降低对比。",
+              "visualQuery": "photography composition grid landscape framing"
+            },
+            {
+              "heading": "移动并检查",
+              "body": "把主体从正中移到三分线附近，检查边缘是否切掉重要部分。",
+              "seconds": 9,
+              "visualPrompt": "前后构图示意对应把主体从正中移到三分线附近，检查边缘是否切掉重要部分。，只保留一组比较。",
+              "visualQuery": "photography composition grid landscape comparison grid"
+            },
+            {
+              "heading": "留一个练习",
+              "body": "保留居中和偏移两版，写下更喜欢哪一张以及原因。",
+              "seconds": 6,
+              "visualPrompt": "两个版本与空白观察笔记并排，表现保留居中和偏移两版，写下更喜欢哪一张以及原因。。",
+              "visualQuery": "photography composition grid landscape comparison"
+            }
+          ]
+        }
+      },
+      "mediaPreset": {
+        "id": "process-svg",
+        "kind": "svg",
+        "sceneIndices": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "game-commentary",
+      "name": "游戏回合复盘",
+      "category": "游戏解说",
+      "description": "按局面、选择和结果复盘。真实游戏片段需用户提供并授权；无素材时明确使用自拟战术图示。",
+      "useCases": [
+        "游戏",
+        "解说",
+        "复盘"
+      ],
+      "keywords": [
+        "游戏",
+        "解说",
+        "复盘",
+        "战术",
+        "关卡",
+        "game",
+        "gaming"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "collage",
+        "visualStyle": "illustration",
+        "visualTheme": "错位拼贴与局部放大，保留主体关系与前后对照。",
+        "pacing": "先看局面，停在决策，再比较代价",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "footageNote",
+          "heading": "先说明素材",
+          "purpose": "区分实录与自拟示意。",
+          "seconds": 5
+        },
+        {
+          "id": "situation",
+          "heading": "看起始局面",
+          "purpose": "标清位置关系。",
+          "seconds": 7
+        },
+        {
+          "id": "decision",
+          "heading": "关键选择",
+          "purpose": "用路径解释一个决策。",
+          "seconds": 8
+        },
+        {
+          "id": "outcome",
+          "heading": "比较代价",
+          "purpose": "同时说明收益与取舍。",
+          "seconds": 8
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "自拟棋盘回合的空间选择",
+          "maxLength": 80
+        },
+        {
+          "key": "footageNote",
+          "label": "素材范围与说明",
+          "required": true,
+          "example": "以下为自拟棋盘示意，不对应真实比赛或游戏实录。",
+          "maxLength": 600
+        },
+        {
+          "key": "situation",
+          "label": "起始局面",
+          "required": true,
+          "example": "己方两枚棋子集中在左侧，右侧还有空位。",
+          "maxLength": 600
+        },
+        {
+          "key": "decision",
+          "label": "关键选择",
+          "required": true,
+          "example": "让一枚棋子向右移动，尝试增加后续可选位置。",
+          "maxLength": 600
+        },
+        {
+          "key": "outcome",
+          "label": "结果与复盘",
+          "required": true,
+          "example": "棋子变得分散，左侧配合也减弱了；空间和集中需要一起考虑。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "board game strategy pieces",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{footageNote}}{{situation}}{{decision}}{{outcome}}",
+        "tags": [
+          "游戏解说",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，错位拼贴与局部放大，保留主体关系与前后对照。",
+        "visualStyle": "illustration",
+        "scenes": [
+          {
+            "heading": "先说明素材",
+            "body": "{{footageNote}}",
+            "seconds": 5,
+            "visualPrompt": "原创简化棋盘，说明{{footageNote}}；不用未授权游戏截图。",
+            "visualQuery": "{{visualSubject}} illustration"
+          },
+          {
+            "heading": "看起始局面",
+            "body": "{{situation}}",
+            "seconds": 7,
+            "visualPrompt": "鸟瞰战术示意呈现{{situation}}。",
+            "visualQuery": "{{visualSubject}} top view"
+          },
+          {
+            "heading": "关键选择",
+            "body": "{{decision}}",
+            "seconds": 8,
+            "visualPrompt": "路径箭头与局部放大框说明{{decision}}。",
+            "visualQuery": "{{visualSubject}} movement diagram"
+          },
+          {
+            "heading": "比较代价",
+            "body": "{{outcome}}",
+            "seconds": 8,
+            "visualPrompt": "前后局面并排，对应{{outcome}}；这是示意图而非录屏。",
+            "visualQuery": "{{visualSubject}} comparison"
+          }
+        ]
+      },
+      "example": {
+        "topic": "自拟棋盘回合的空间选择",
+        "values": {
+          "topic": "自拟棋盘回合的空间选择",
+          "footageNote": "以下为自拟棋盘示意，不对应真实比赛或游戏实录。",
+          "situation": "己方两枚棋子集中在左侧，右侧还有空位。",
+          "decision": "让一枚棋子向右移动，尝试增加后续可选位置。",
+          "outcome": "棋子变得分散，左侧配合也减弱了；空间和集中需要一起考虑。",
+          "visualSubject": "board game strategy pieces"
+        },
+        "recipe": {
+          "title": "自拟棋盘回合的空间选择",
+          "narration": "以下为自拟棋盘示意，不对应真实比赛或游戏实录。己方两枚棋子集中在左侧，右侧还有空位。让一枚棋子向右移动，尝试增加后续可选位置。棋子变得分散，左侧配合也减弱了；空间和集中需要一起考虑。",
+          "tags": [
+            "游戏解说",
+            "自拟棋盘回合的空间选择"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕自拟棋盘回合的空间选择，错位拼贴与局部放大，保留主体关系与前后对照。",
+          "visualStyle": "illustration",
+          "scenes": [
+            {
+              "heading": "先说明素材",
+              "body": "以下为自拟棋盘示意，不对应真实比赛或游戏实录。",
+              "seconds": 5,
+              "visualPrompt": "原创简化棋盘，说明以下为自拟棋盘示意，不对应真实比赛或游戏实录。；不用未授权游戏截图。",
+              "visualQuery": "board game strategy pieces illustration"
+            },
+            {
+              "heading": "看起始局面",
+              "body": "己方两枚棋子集中在左侧，右侧还有空位。",
+              "seconds": 7,
+              "visualPrompt": "鸟瞰战术示意呈现己方两枚棋子集中在左侧，右侧还有空位。。",
+              "visualQuery": "board game strategy pieces top view"
+            },
+            {
+              "heading": "关键选择",
+              "body": "让一枚棋子向右移动，尝试增加后续可选位置。",
+              "seconds": 8,
+              "visualPrompt": "路径箭头与局部放大框说明让一枚棋子向右移动，尝试增加后续可选位置。。",
+              "visualQuery": "board game strategy pieces movement diagram"
+            },
+            {
+              "heading": "比较代价",
+              "body": "棋子变得分散，左侧配合也减弱了；空间和集中需要一起考虑。",
+              "seconds": 8,
+              "visualPrompt": "前后局面并排，对应棋子变得分散，左侧配合也减弱了；空间和集中需要一起考虑。；这是示意图而非录屏。",
+              "visualQuery": "board game strategy pieces comparison"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "outdoor-sport",
+      "name": "户外运动准备",
+      "category": "户外运动",
+      "description": "按路线、物品、途中观察和复盘组织活动。需真实路线资料或装备照片；模板不替代专业安全指导。",
+      "useCases": [
+        "户外",
+        "运动",
+        "徒步"
+      ],
+      "keywords": [
+        "户外",
+        "运动",
+        "徒步",
+        "骑行",
+        "露营",
+        "登山",
+        "outdoor",
+        "hiking"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "cinema",
+        "visualStyle": "photo",
+        "visualTheme": "全幅主体画面，环境广角与细节交替，色彩自然。",
+        "pacing": "环境先行，物品细看，过程平稳",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "route",
+          "heading": "先看环境",
+          "purpose": "说明活动范围与现场条件。",
+          "seconds": 7
+        },
+        {
+          "id": "packing",
+          "heading": "打开背包",
+          "purpose": "说明物品选择。",
+          "seconds": 7
+        },
+        {
+          "id": "process",
+          "heading": "看过程细节",
+          "purpose": "展示观察节奏。",
+          "seconds": 8
+        },
+        {
+          "id": "review",
+          "heading": "回来再调整",
+          "purpose": "用具体复盘结束。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "短途公园徒步的准备清单",
+          "maxLength": 80
+        },
+        {
+          "key": "route",
+          "label": "路线与环境",
+          "required": true,
+          "example": "示例选择有明确步道的城市公园，行程以当天现场条件为准。",
+          "maxLength": 600
+        },
+        {
+          "key": "packing",
+          "label": "携带物品",
+          "required": true,
+          "example": "把饮水、轻便外套、纸巾和充好电的手机放进背包。",
+          "maxLength": 600
+        },
+        {
+          "key": "process",
+          "label": "途中观察",
+          "required": true,
+          "example": "留意路标和步道变化，遇到不确定的岔路就先停下核对路线。",
+          "maxLength": 600
+        },
+        {
+          "key": "review",
+          "label": "结束复盘",
+          "required": true,
+          "example": "回来后记录哪些物品用上了，下次再调整清单。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "park hiking backpack trail",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{route}}{{packing}}{{process}}{{review}}",
+        "tags": [
+          "户外运动",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，全幅主体画面，环境广角与细节交替，色彩自然。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先看环境",
+            "body": "{{route}}",
+            "seconds": 7,
+            "visualPrompt": "步道与入口远景对应{{route}}，具体路线需用户确认。",
+            "visualQuery": "{{visualSubject}} wide trail"
+          },
+          {
+            "heading": "打开背包",
+            "body": "{{packing}}",
+            "seconds": 7,
+            "visualPrompt": "平铺装备近景表现{{packing}}，不声称这是完整安全清单。",
+            "visualQuery": "{{visualSubject}} gear flat lay"
+          },
+          {
+            "heading": "看过程细节",
+            "body": "{{process}}",
+            "seconds": 8,
+            "visualPrompt": "行走视角与路标特写承载{{process}}。",
+            "visualQuery": "{{visualSubject}} trail signs"
+          },
+          {
+            "heading": "回来再调整",
+            "body": "{{review}}",
+            "seconds": 6,
+            "visualPrompt": "背包和记录本俯拍，表现{{review}}。",
+            "visualQuery": "{{visualSubject}} journal"
+          }
+        ]
+      },
+      "example": {
+        "topic": "短途公园徒步的准备清单",
+        "values": {
+          "topic": "短途公园徒步的准备清单",
+          "route": "示例选择有明确步道的城市公园，行程以当天现场条件为准。",
+          "packing": "把饮水、轻便外套、纸巾和充好电的手机放进背包。",
+          "process": "留意路标和步道变化，遇到不确定的岔路就先停下核对路线。",
+          "review": "回来后记录哪些物品用上了，下次再调整清单。",
+          "visualSubject": "park hiking backpack trail"
+        },
+        "recipe": {
+          "title": "短途公园徒步的准备清单",
+          "narration": "示例选择有明确步道的城市公园，行程以当天现场条件为准。把饮水、轻便外套、纸巾和充好电的手机放进背包。留意路标和步道变化，遇到不确定的岔路就先停下核对路线。回来后记录哪些物品用上了，下次再调整清单。",
+          "tags": [
+            "户外运动",
+            "短途公园徒步的准备清单"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕短途公园徒步的准备清单，全幅主体画面，环境广角与细节交替，色彩自然。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先看环境",
+              "body": "示例选择有明确步道的城市公园，行程以当天现场条件为准。",
+              "seconds": 7,
+              "visualPrompt": "步道与入口远景对应示例选择有明确步道的城市公园，行程以当天现场条件为准。，具体路线需用户确认。",
+              "visualQuery": "park hiking backpack trail wide trail"
+            },
+            {
+              "heading": "打开背包",
+              "body": "把饮水、轻便外套、纸巾和充好电的手机放进背包。",
+              "seconds": 7,
+              "visualPrompt": "平铺装备近景表现把饮水、轻便外套、纸巾和充好电的手机放进背包。，不声称这是完整安全清单。",
+              "visualQuery": "park hiking backpack trail gear flat lay"
+            },
+            {
+              "heading": "看过程细节",
+              "body": "留意路标和步道变化，遇到不确定的岔路就先停下核对路线。",
+              "seconds": 8,
+              "visualPrompt": "行走视角与路标特写承载留意路标和步道变化，遇到不确定的岔路就先停下核对路线。。",
+              "visualQuery": "park hiking backpack trail trail signs"
+            },
+            {
+              "heading": "回来再调整",
+              "body": "回来后记录哪些物品用上了，下次再调整清单。",
+              "seconds": 6,
+              "visualPrompt": "背包和记录本俯拍，表现回来后记录哪些物品用上了，下次再调整清单。。",
+              "visualQuery": "park hiking backpack trail journal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "travel-diary",
+      "name": "城市散步日记",
+      "category": "旅行",
+      "description": "用环境、发现、细节和感受记录散步。示例为自拟场景，真实地点与经历需要填写。",
+      "useCases": [
+        "旅行",
+        "游记",
+        "散步"
+      ],
+      "keywords": [
+        "旅行",
+        "游记",
+        "散步",
+        "城市漫步",
+        "打卡",
+        "travel",
+        "walk"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "diary",
+        "visualStyle": "photo",
+        "visualTheme": "纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+        "pacing": "环境慢开场，细节停留，感受轻收尾",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "setting",
+          "heading": "翻开这一页",
+          "purpose": "明确真实或自拟情境。",
+          "seconds": 7
+        },
+        {
+          "id": "discovery",
+          "heading": "看一个发现",
+          "purpose": "让发现推动镜头。",
+          "seconds": 8
+        },
+        {
+          "id": "detail",
+          "heading": "停在细节",
+          "purpose": "用具体观察建立氛围。",
+          "seconds": 7
+        },
+        {
+          "id": "feeling",
+          "heading": "留一句感受",
+          "purpose": "以个人感受收束。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "一段自拟的河畔散步",
+          "maxLength": 80
+        },
+        {
+          "key": "setting",
+          "label": "地点与时间说明",
+          "required": true,
+          "example": "这是自拟的河畔下午散步片段，画面用于示意。",
+          "maxLength": 600
+        },
+        {
+          "key": "discovery",
+          "label": "途中发现",
+          "required": true,
+          "example": "把注意力移到水面，看见倒影被风轻轻打散。",
+          "maxLength": 600
+        },
+        {
+          "key": "detail",
+          "label": "停留的细节",
+          "required": true,
+          "example": "石阶阴影和栏杆的重复线条，让普通步道有了不同节奏。",
+          "maxLength": 600
+        },
+        {
+          "key": "feeling",
+          "label": "个人感受",
+          "required": true,
+          "example": "这段散步没有赶路目标，只是练习慢一点观察。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "riverside city walkway reflection",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{setting}}{{discovery}}{{detail}}{{feeling}}",
+        "tags": [
+          "旅行",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "翻开这一页",
+            "body": "{{setting}}",
+            "seconds": 7,
+            "visualPrompt": "步道广角放入日记边框，对应{{setting}}，不虚构地标。",
+            "visualQuery": "{{visualSubject}} wide walkway"
+          },
+          {
+            "heading": "看一个发现",
+            "body": "{{discovery}}",
+            "seconds": 8,
+            "visualPrompt": "水面反光近景承载{{discovery}}，慢慢推近。",
+            "visualQuery": "{{visualSubject}} water reflection"
+          },
+          {
+            "heading": "停在细节",
+            "body": "{{detail}}",
+            "seconds": 7,
+            "visualPrompt": "环境细节拼贴对应{{detail}}。",
+            "visualQuery": "{{visualSubject}} architectural detail"
+          },
+          {
+            "heading": "留一句感受",
+            "body": "{{feeling}}",
+            "seconds": 6,
+            "visualPrompt": "远景慢慢拉开，留白日记版面承载{{feeling}}。",
+            "visualQuery": "{{visualSubject}} quiet afternoon"
+          }
+        ]
+      },
+      "example": {
+        "topic": "一段自拟的河畔散步",
+        "values": {
+          "topic": "一段自拟的河畔散步",
+          "setting": "这是自拟的河畔下午散步片段，画面用于示意。",
+          "discovery": "把注意力移到水面，看见倒影被风轻轻打散。",
+          "detail": "石阶阴影和栏杆的重复线条，让普通步道有了不同节奏。",
+          "feeling": "这段散步没有赶路目标，只是练习慢一点观察。",
+          "visualSubject": "riverside city walkway reflection"
+        },
+        "recipe": {
+          "title": "一段自拟的河畔散步",
+          "narration": "这是自拟的河畔下午散步片段，画面用于示意。把注意力移到水面，看见倒影被风轻轻打散。石阶阴影和栏杆的重复线条，让普通步道有了不同节奏。这段散步没有赶路目标，只是练习慢一点观察。",
+          "tags": [
+            "旅行",
+            "一段自拟的河畔散步"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕一段自拟的河畔散步，纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "翻开这一页",
+              "body": "这是自拟的河畔下午散步片段，画面用于示意。",
+              "seconds": 7,
+              "visualPrompt": "步道广角放入日记边框，对应这是自拟的河畔下午散步片段，画面用于示意。，不虚构地标。",
+              "visualQuery": "riverside city walkway reflection wide walkway"
+            },
+            {
+              "heading": "看一个发现",
+              "body": "把注意力移到水面，看见倒影被风轻轻打散。",
+              "seconds": 8,
+              "visualPrompt": "水面反光近景承载把注意力移到水面，看见倒影被风轻轻打散。，慢慢推近。",
+              "visualQuery": "riverside city walkway reflection water reflection"
+            },
+            {
+              "heading": "停在细节",
+              "body": "石阶阴影和栏杆的重复线条，让普通步道有了不同节奏。",
+              "seconds": 7,
+              "visualPrompt": "环境细节拼贴对应石阶阴影和栏杆的重复线条，让普通步道有了不同节奏。。",
+              "visualQuery": "riverside city walkway reflection architectural detail"
+            },
+            {
+              "heading": "留一句感受",
+              "body": "这段散步没有赶路目标，只是练习慢一点观察。",
+              "seconds": 6,
+              "visualPrompt": "远景慢慢拉开，留白日记版面承载这段散步没有赶路目标，只是练习慢一点观察。。",
+              "visualQuery": "riverside city walkway reflection quiet afternoon"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "food-observation",
+      "name": "食物与饮品观察",
+      "category": "美食",
+      "description": "记录材料、制作变化和个人感受。需填写实际食材与体验，不套用健康功效。",
+      "useCases": [
+        "美食",
+        "饮品",
+        "食材"
+      ],
+      "keywords": [
+        "美食",
+        "饮品",
+        "食材",
+        "茶",
+        "咖啡",
+        "food",
+        "coffee"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "magazine",
+        "visualStyle": "photo",
+        "visualTheme": "留白版面与照片边框，重点短句清楚，字体克制。",
+        "pacing": "原料停留，过程连贯，体验克制",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "material",
+          "heading": "看清原料",
+          "purpose": "交代真实材料与工具。",
+          "seconds": 7
+        },
+        {
+          "id": "process",
+          "heading": "跟着变化看",
+          "purpose": "观察一个连贯过程。",
+          "seconds": 8
+        },
+        {
+          "id": "sensory",
+          "heading": "说自己的感受",
+          "purpose": "区分个人体验与事实。",
+          "seconds": 7
+        },
+        {
+          "id": "conclusion",
+          "heading": "留下观察结论",
+          "purpose": "解释体验差异。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "观察一杯红茶的颜色变化",
+          "maxLength": 80
+        },
+        {
+          "key": "material",
+          "label": "材料与器具",
+          "required": true,
+          "example": "准备少量红茶、杯子和水，按茶叶说明冲泡。",
+          "maxLength": 600
+        },
+        {
+          "key": "process",
+          "label": "制作观察过程",
+          "required": true,
+          "example": "先看干茶，再看茶叶进入水后逐渐舒展的样子。",
+          "maxLength": 600
+        },
+        {
+          "key": "sensory",
+          "label": "自己的感受",
+          "required": true,
+          "example": "这杯茶颜色从浅到深，我闻到的香气也更明显。",
+          "maxLength": 600
+        },
+        {
+          "key": "conclusion",
+          "label": "体验说明",
+          "required": true,
+          "example": "这是个人观察，颜色和味道会随茶叶与冲泡方式变化。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "black tea cup leaves brewing",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{material}}{{process}}{{sensory}}{{conclusion}}",
+        "tags": [
+          "美食",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，留白版面与照片边框，重点短句清楚，字体克制。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "看清原料",
+            "body": "{{material}}",
+            "seconds": 7,
+            "visualPrompt": "窗边平铺材料，表现{{material}}，不显示健康功效。",
+            "visualQuery": "{{visualSubject}} ingredients close up"
+          },
+          {
+            "heading": "跟着变化看",
+            "body": "{{process}}",
+            "seconds": 8,
+            "visualPrompt": "近景相关画面依次表现{{process}}。",
+            "visualQuery": "{{visualSubject}} brewing detail"
+          },
+          {
+            "heading": "说自己的感受",
+            "body": "{{sensory}}",
+            "seconds": 7,
+            "visualPrompt": "饮品颜色与杯沿反光特写，对应{{sensory}}。",
+            "visualQuery": "{{visualSubject}} cup color"
+          },
+          {
+            "heading": "留下观察结论",
+            "body": "{{conclusion}}",
+            "seconds": 6,
+            "visualPrompt": "留白桌面中杯子缓慢移远，承载{{conclusion}}。",
+            "visualQuery": "{{visualSubject}} tabletop"
+          }
+        ]
+      },
+      "example": {
+        "topic": "观察一杯红茶的颜色变化",
+        "values": {
+          "topic": "观察一杯红茶的颜色变化",
+          "material": "准备少量红茶、杯子和水，按茶叶说明冲泡。",
+          "process": "先看干茶，再看茶叶进入水后逐渐舒展的样子。",
+          "sensory": "这杯茶颜色从浅到深，我闻到的香气也更明显。",
+          "conclusion": "这是个人观察，颜色和味道会随茶叶与冲泡方式变化。",
+          "visualSubject": "black tea cup leaves brewing"
+        },
+        "recipe": {
+          "title": "观察一杯红茶的颜色变化",
+          "narration": "准备少量红茶、杯子和水，按茶叶说明冲泡。先看干茶，再看茶叶进入水后逐渐舒展的样子。这杯茶颜色从浅到深，我闻到的香气也更明显。这是个人观察，颜色和味道会随茶叶与冲泡方式变化。",
+          "tags": [
+            "美食",
+            "观察一杯红茶的颜色变化"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕观察一杯红茶的颜色变化，留白版面与照片边框，重点短句清楚，字体克制。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "看清原料",
+              "body": "准备少量红茶、杯子和水，按茶叶说明冲泡。",
+              "seconds": 7,
+              "visualPrompt": "窗边平铺材料，表现准备少量红茶、杯子和水，按茶叶说明冲泡。，不显示健康功效。",
+              "visualQuery": "black tea cup leaves brewing ingredients close up"
+            },
+            {
+              "heading": "跟着变化看",
+              "body": "先看干茶，再看茶叶进入水后逐渐舒展的样子。",
+              "seconds": 8,
+              "visualPrompt": "近景相关画面依次表现先看干茶，再看茶叶进入水后逐渐舒展的样子。。",
+              "visualQuery": "black tea cup leaves brewing brewing detail"
+            },
+            {
+              "heading": "说自己的感受",
+              "body": "这杯茶颜色从浅到深，我闻到的香气也更明显。",
+              "seconds": 7,
+              "visualPrompt": "饮品颜色与杯沿反光特写，对应这杯茶颜色从浅到深，我闻到的香气也更明显。。",
+              "visualQuery": "black tea cup leaves brewing cup color"
+            },
+            {
+              "heading": "留下观察结论",
+              "body": "这是个人观察，颜色和味道会随茶叶与冲泡方式变化。",
+              "seconds": 6,
+              "visualPrompt": "留白桌面中杯子缓慢移远，承载这是个人观察，颜色和味道会随茶叶与冲泡方式变化。。",
+              "visualQuery": "black tea cup leaves brewing tabletop"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "product-demo",
+      "name": "物品使用演示",
+      "category": "生活技巧",
+      "description": "说明具体问题、操作、变化和限制。需实际物品资料或自有照片，不虚构产品效果。",
+      "useCases": [
+        "收纳",
+        "工具",
+        "使用演示"
+      ],
+      "keywords": [
+        "收纳",
+        "工具",
+        "使用演示",
+        "产品演示",
+        "product",
+        "demo"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "collage",
+        "visualStyle": "photo",
+        "visualTheme": "错位拼贴与局部放大，保留主体关系与前后对照。",
+        "pacing": "先看问题，过程两步，结尾说限制",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "problem",
+          "heading": "先看问题",
+          "purpose": "展示使用前的具体状态。",
+          "seconds": 6
+        },
+        {
+          "id": "action",
+          "heading": "展示操作",
+          "purpose": "解释操作方法。",
+          "seconds": 9
+        },
+        {
+          "id": "result",
+          "heading": "比较变化",
+          "purpose": "让变化可见。",
+          "seconds": 7
+        },
+        {
+          "id": "limitation",
+          "heading": "说明范围",
+          "purpose": "用限制结束。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "用分隔盒整理桌面小物",
+          "maxLength": 80
+        },
+        {
+          "key": "problem",
+          "label": "原来的问题",
+          "required": true,
+          "example": "橡皮、夹子和便签混在一起，找东西时需要翻动。",
+          "maxLength": 600
+        },
+        {
+          "key": "action",
+          "label": "使用步骤",
+          "required": true,
+          "example": "先按用途分组，再把每组放进一个分隔格。",
+          "maxLength": 600
+        },
+        {
+          "key": "result",
+          "label": "观察到的变化",
+          "required": true,
+          "example": "整理后能看见每类小物，也容易放回原处。",
+          "maxLength": 600
+        },
+        {
+          "key": "limitation",
+          "label": "适用限制",
+          "required": true,
+          "example": "这适合数量不多的小物；大物品需要另找位置。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "desk organizer compartments stationery",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{problem}}{{action}}{{result}}{{limitation}}",
+        "tags": [
+          "生活技巧",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，错位拼贴与局部放大，保留主体关系与前后对照。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先看问题",
+            "body": "{{problem}}",
+            "seconds": 6,
+            "visualPrompt": "相关桌面细节对应{{problem}}，不虚构品牌。",
+            "visualQuery": "{{visualSubject}} before arrangement"
+          },
+          {
+            "heading": "展示操作",
+            "body": "{{action}}",
+            "seconds": 9,
+            "visualPrompt": "俯拍物品与分隔格表现{{action}}；手部操作可换自有视频。",
+            "visualQuery": "{{visualSubject}} organizing top view"
+          },
+          {
+            "heading": "比较变化",
+            "body": "{{result}}",
+            "seconds": 7,
+            "visualPrompt": "前后照片错位拼贴对应{{result}}。",
+            "visualQuery": "{{visualSubject}} comparison"
+          },
+          {
+            "heading": "说明范围",
+            "body": "{{limitation}}",
+            "seconds": 6,
+            "visualPrompt": "物品尺度对照表现{{limitation}}。",
+            "visualQuery": "{{visualSubject}} detail"
+          }
+        ]
+      },
+      "example": {
+        "topic": "用分隔盒整理桌面小物",
+        "values": {
+          "topic": "用分隔盒整理桌面小物",
+          "problem": "橡皮、夹子和便签混在一起，找东西时需要翻动。",
+          "action": "先按用途分组，再把每组放进一个分隔格。",
+          "result": "整理后能看见每类小物，也容易放回原处。",
+          "limitation": "这适合数量不多的小物；大物品需要另找位置。",
+          "visualSubject": "desk organizer compartments stationery"
+        },
+        "recipe": {
+          "title": "用分隔盒整理桌面小物",
+          "narration": "橡皮、夹子和便签混在一起，找东西时需要翻动。先按用途分组，再把每组放进一个分隔格。整理后能看见每类小物，也容易放回原处。这适合数量不多的小物；大物品需要另找位置。",
+          "tags": [
+            "生活技巧",
+            "用分隔盒整理桌面小物"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕用分隔盒整理桌面小物，错位拼贴与局部放大，保留主体关系与前后对照。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先看问题",
+              "body": "橡皮、夹子和便签混在一起，找东西时需要翻动。",
+              "seconds": 6,
+              "visualPrompt": "相关桌面细节对应橡皮、夹子和便签混在一起，找东西时需要翻动。，不虚构品牌。",
+              "visualQuery": "desk organizer compartments stationery before arrangement"
+            },
+            {
+              "heading": "展示操作",
+              "body": "先按用途分组，再把每组放进一个分隔格。",
+              "seconds": 9,
+              "visualPrompt": "俯拍物品与分隔格表现先按用途分组，再把每组放进一个分隔格。；手部操作可换自有视频。",
+              "visualQuery": "desk organizer compartments stationery organizing top view"
+            },
+            {
+              "heading": "比较变化",
+              "body": "整理后能看见每类小物，也容易放回原处。",
+              "seconds": 7,
+              "visualPrompt": "前后照片错位拼贴对应整理后能看见每类小物，也容易放回原处。。",
+              "visualQuery": "desk organizer compartments stationery comparison"
+            },
+            {
+              "heading": "说明范围",
+              "body": "这适合数量不多的小物；大物品需要另找位置。",
+              "seconds": 6,
+              "visualPrompt": "物品尺度对照表现这适合数量不多的小物；大物品需要另找位置。。",
+              "visualQuery": "desk organizer compartments stationery detail"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "history-artifact",
+      "name": "物件讲历史",
+      "category": "历史文化",
+      "description": "从物件说明用途和资料线索。需可靠资料与明确范围，避免无来源的年代或人物断言。",
+      "useCases": [
+        "历史",
+        "文物",
+        "博物馆"
+      ],
+      "keywords": [
+        "历史",
+        "文物",
+        "博物馆",
+        "老物件",
+        "印刷",
+        "history",
+        "artifact"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "magazine",
+        "visualStyle": "mixed",
+        "visualTheme": "留白版面与照片边框，重点短句清楚，字体克制。",
+        "pacing": "物件开场，用途展开，资料边界明确",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "artifact",
+          "heading": "从物件开始",
+          "purpose": "描述可以看见的特点。",
+          "seconds": 7
+        },
+        {
+          "id": "function",
+          "heading": "看怎样工作",
+          "purpose": "用资料解释用途。",
+          "seconds": 8
+        },
+        {
+          "id": "connection",
+          "heading": "连接今天",
+          "purpose": "提出有依据的理解。",
+          "seconds": 7
+        },
+        {
+          "id": "sourceScope",
+          "heading": "说清资料边界",
+          "purpose": "说明来源范围与不确定内容。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "从活字看重复排印",
+          "maxLength": 80
+        },
+        {
+          "key": "artifact",
+          "label": "可见特点",
+          "required": true,
+          "example": "活字是一枚枚能单独组合的字块。",
+          "maxLength": 600
+        },
+        {
+          "key": "function",
+          "label": "用途与原理",
+          "required": true,
+          "example": "按需要排列字块组成版面，就能用于重复排印。",
+          "maxLength": 600
+        },
+        {
+          "key": "connection",
+          "label": "与生活的关联",
+          "required": true,
+          "example": "信息复制也包含整理和重新组合的工作。",
+          "maxLength": 600
+        },
+        {
+          "key": "sourceScope",
+          "label": "资料范围与未知处",
+          "required": true,
+          "example": "这里只讲活字组合的一般原理，不涉及年代、地域或发明人归属。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "letterpress movable type printing blocks",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{artifact}}{{function}}{{connection}}{{sourceScope}}",
+        "tags": [
+          "历史文化",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，留白版面与照片边框，重点短句清楚，字体克制。",
+        "visualStyle": "mixed",
+        "scenes": [
+          {
+            "heading": "从物件开始",
+            "body": "{{artifact}}",
+            "seconds": 7,
+            "visualPrompt": "物件微距对应{{artifact}}，保留纹理。",
+            "visualQuery": "{{visualSubject}} macro blocks"
+          },
+          {
+            "heading": "看怎样工作",
+            "body": "{{function}}",
+            "seconds": 8,
+            "visualPrompt": "物件与原创排列示意表现{{function}}。",
+            "visualQuery": "{{visualSubject}} arrangement diagram"
+          },
+          {
+            "heading": "连接今天",
+            "body": "{{connection}}",
+            "seconds": 7,
+            "visualPrompt": "物件与完整结果的局部对照，对应{{connection}}。",
+            "visualQuery": "{{visualSubject}} printed page"
+          },
+          {
+            "heading": "说清资料边界",
+            "body": "{{sourceScope}}",
+            "seconds": 6,
+            "visualPrompt": "资料卡与物件照片并置，表现{{sourceScope}}，不伪造档案。",
+            "visualQuery": "{{visualSubject}} archive detail"
+          }
+        ]
+      },
+      "example": {
+        "topic": "从活字看重复排印",
+        "values": {
+          "topic": "从活字看重复排印",
+          "artifact": "活字是一枚枚能单独组合的字块。",
+          "function": "按需要排列字块组成版面，就能用于重复排印。",
+          "connection": "信息复制也包含整理和重新组合的工作。",
+          "sourceScope": "这里只讲活字组合的一般原理，不涉及年代、地域或发明人归属。",
+          "visualSubject": "letterpress movable type printing blocks"
+        },
+        "recipe": {
+          "title": "从活字看重复排印",
+          "narration": "活字是一枚枚能单独组合的字块。按需要排列字块组成版面，就能用于重复排印。信息复制也包含整理和重新组合的工作。这里只讲活字组合的一般原理，不涉及年代、地域或发明人归属。",
+          "tags": [
+            "历史文化",
+            "从活字看重复排印"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕从活字看重复排印，留白版面与照片边框，重点短句清楚，字体克制。",
+          "visualStyle": "mixed",
+          "scenes": [
+            {
+              "heading": "从物件开始",
+              "body": "活字是一枚枚能单独组合的字块。",
+              "seconds": 7,
+              "visualPrompt": "物件微距对应活字是一枚枚能单独组合的字块。，保留纹理。",
+              "visualQuery": "letterpress movable type printing blocks macro blocks"
+            },
+            {
+              "heading": "看怎样工作",
+              "body": "按需要排列字块组成版面，就能用于重复排印。",
+              "seconds": 8,
+              "visualPrompt": "物件与原创排列示意表现按需要排列字块组成版面，就能用于重复排印。。",
+              "visualQuery": "letterpress movable type printing blocks arrangement diagram"
+            },
+            {
+              "heading": "连接今天",
+              "body": "信息复制也包含整理和重新组合的工作。",
+              "seconds": 7,
+              "visualPrompt": "物件与完整结果的局部对照，对应信息复制也包含整理和重新组合的工作。。",
+              "visualQuery": "letterpress movable type printing blocks printed page"
+            },
+            {
+              "heading": "说清资料边界",
+              "body": "这里只讲活字组合的一般原理，不涉及年代、地域或发明人归属。",
+              "seconds": 6,
+              "visualPrompt": "资料卡与物件照片并置，表现这里只讲活字组合的一般原理，不涉及年代、地域或发明人归属。，不伪造档案。",
+              "visualQuery": "letterpress movable type printing blocks archive detail"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "book-note",
+      "name": "原文与读书笔记",
+      "category": "阅读",
+      "description": "将用户有权使用的短摘录和个人理解整理成笔记。示例为原创自拟句，不冒充真实书摘。",
+      "useCases": [
+        "读书",
+        "书摘",
+        "阅读"
+      ],
+      "keywords": [
+        "读书",
+        "书摘",
+        "阅读",
+        "笔记",
+        "book",
+        "reading"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video",
+        "markdown"
+      ],
+      "style": {
+        "presentationStyle": "magazine",
+        "visualStyle": "illustration",
+        "visualTheme": "留白版面与照片边框，重点短句清楚，字体克制。",
+        "pacing": "先给摘录，再解释，联系自己的问题",
+        "durationSeconds": 25,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。 指定理解幕使用Markdown排版示例，转换成原生文字与PNG，保留图片分镜。"
+      },
+      "structure": [
+        {
+          "id": "excerpt",
+          "heading": "读一句原文",
+          "purpose": "使用授权短句并说明出处性质。",
+          "seconds": 8
+        },
+        {
+          "id": "interpretation",
+          "heading": "写下理解",
+          "purpose": "区分摘录与个人理解。",
+          "seconds": 9
+        },
+        {
+          "id": "application",
+          "heading": "用在自己的问题上",
+          "purpose": "让笔记回到行动。",
+          "seconds": 8
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "自拟笔记：把问题写清楚",
+          "maxLength": 80
+        },
+        {
+          "key": "excerpt",
+          "label": "授权短摘录或自写原句",
+          "required": true,
+          "example": "这是自写示例句：先把问题说清楚，再寻找答案。",
+          "maxLength": 600
+        },
+        {
+          "key": "interpretation",
+          "label": "自己的理解",
+          "required": true,
+          "example": "我理解为：先知道要解决什么，查资料才有方向。",
+          "maxLength": 600
+        },
+        {
+          "key": "application",
+          "label": "自己的应用",
+          "required": true,
+          "example": "准备视频时，先写观众可能问的一个问题，再组织分镜。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "open book pencil notes",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{excerpt}}{{interpretation}}{{application}}",
+        "tags": [
+          "阅读",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，留白版面与照片边框，重点短句清楚，字体克制。",
+        "visualStyle": "illustration",
+        "scenes": [
+          {
+            "heading": "读一句原文",
+            "body": "{{excerpt}}",
+            "seconds": 8,
+            "visualPrompt": "打开的笔记本配{{excerpt}}，不伪造真实书名封面。",
+            "visualQuery": "{{visualSubject}} reading desk"
+          },
+          {
+            "heading": "写下理解",
+            "body": "{{interpretation}}",
+            "seconds": 9,
+            "visualPrompt": "纸张注记与阅读物件对应{{interpretation}}。",
+            "visualQuery": "{{visualSubject}} annotation"
+          },
+          {
+            "heading": "用在自己的问题上",
+            "body": "{{application}}",
+            "seconds": 8,
+            "visualPrompt": "便签和分镜草图俯拍，表现{{application}}。",
+            "visualQuery": "{{visualSubject}} storyboard notes"
+          }
+        ]
+      },
+      "example": {
+        "topic": "自拟笔记：把问题写清楚",
+        "values": {
+          "topic": "自拟笔记：把问题写清楚",
+          "excerpt": "这是自写示例句：先把问题说清楚，再寻找答案。",
+          "interpretation": "我理解为：先知道要解决什么，查资料才有方向。",
+          "application": "准备视频时，先写观众可能问的一个问题，再组织分镜。",
+          "visualSubject": "open book pencil notes"
+        },
+        "recipe": {
+          "title": "自拟笔记：把问题写清楚",
+          "narration": "这是自写示例句：先把问题说清楚，再寻找答案。我理解为：先知道要解决什么，查资料才有方向。准备视频时，先写观众可能问的一个问题，再组织分镜。",
+          "tags": [
+            "阅读",
+            "自拟笔记：把问题写清楚"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕自拟笔记：把问题写清楚，留白版面与照片边框，重点短句清楚，字体克制。",
+          "visualStyle": "illustration",
+          "scenes": [
+            {
+              "heading": "读一句原文",
+              "body": "这是自写示例句：先把问题说清楚，再寻找答案。",
+              "seconds": 8,
+              "visualPrompt": "打开的笔记本配这是自写示例句：先把问题说清楚，再寻找答案。，不伪造真实书名封面。",
+              "visualQuery": "open book pencil notes reading desk"
+            },
+            {
+              "heading": "写下理解",
+              "body": "我理解为：先知道要解决什么，查资料才有方向。",
+              "seconds": 9,
+              "visualPrompt": "纸张注记与阅读物件对应我理解为：先知道要解决什么，查资料才有方向。。",
+              "visualQuery": "open book pencil notes annotation"
+            },
+            {
+              "heading": "用在自己的问题上",
+              "body": "准备视频时，先写观众可能问的一个问题，再组织分镜。",
+              "seconds": 8,
+              "visualPrompt": "便签和分镜草图俯拍，表现准备视频时，先写观众可能问的一个问题，再组织分镜。。",
+              "visualQuery": "open book pencil notes storyboard notes"
+            }
+          ]
+        }
+      },
+      "mediaPreset": {
+        "id": "reading-markdown",
+        "kind": "markdown",
+        "sceneIndices": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "creative-process",
+      "name": "创作过程记录",
+      "category": "艺术创作",
+      "description": "从观察、草图到修改和回看展示过程。需自有过程画面或材料图，不声称已完成真实作品。",
+      "useCases": [
+        "创作",
+        "绘画",
+        "插画"
+      ],
+      "keywords": [
+        "创作",
+        "绘画",
+        "插画",
+        "画画",
+        "设计过程",
+        "art",
+        "creative"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video",
+        "lottie"
+      ],
+      "style": {
+        "presentationStyle": "diary",
+        "visualStyle": "mixed",
+        "visualTheme": "纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+        "pacing": "观察和落笔放慢，修改明确",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。 指定草图幕使用内置Lottie几何shape/transform示例的有限适配；不支持任意外部Lottie JSON或全部效果。"
+      },
+      "structure": [
+        {
+          "id": "inspiration",
+          "heading": "先观察",
+          "purpose": "交代创作起点。",
+          "seconds": 7
+        },
+        {
+          "id": "rough",
+          "heading": "落下第一稿",
+          "purpose": "展示主要制作步骤。",
+          "seconds": 8
+        },
+        {
+          "id": "revision",
+          "heading": "看一次修改",
+          "purpose": "解释局部调整。",
+          "seconds": 7
+        },
+        {
+          "id": "reflection",
+          "heading": "回看练习",
+          "purpose": "总结具体收获。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "画一片树叶的观察练习",
+          "maxLength": 80
+        },
+        {
+          "key": "inspiration",
+          "label": "观察起点",
+          "required": true,
+          "example": "先看树叶外轮廓，留意左右并不完全对称。",
+          "maxLength": 600
+        },
+        {
+          "key": "rough",
+          "label": "草图步骤",
+          "required": true,
+          "example": "用轻线画大形，再补一条主要叶脉。",
+          "maxLength": 600
+        },
+        {
+          "key": "revision",
+          "label": "修改重点",
+          "required": true,
+          "example": "擦淡过硬的边线，让叶缘变化更自然。",
+          "maxLength": 600
+        },
+        {
+          "key": "reflection",
+          "label": "完成回看",
+          "required": true,
+          "example": "最有用的是观察，不是把每条线画得一样。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "leaf sketch drawing pencil paper",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{inspiration}}{{rough}}{{revision}}{{reflection}}",
+        "tags": [
+          "艺术创作",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+        "visualStyle": "mixed",
+        "scenes": [
+          {
+            "heading": "先观察",
+            "body": "{{inspiration}}",
+            "seconds": 7,
+            "visualPrompt": "材料与空白纸摆在桌面，对应{{inspiration}}。",
+            "visualQuery": "{{visualSubject}} leaf macro"
+          },
+          {
+            "heading": "落下第一稿",
+            "body": "{{rough}}",
+            "seconds": 8,
+            "visualPrompt": "原创草图示意表现{{rough}}；实际过程需自有画面。",
+            "visualQuery": "{{visualSubject}} pencil sketch"
+          },
+          {
+            "heading": "看一次修改",
+            "body": "{{revision}}",
+            "seconds": 7,
+            "visualPrompt": "草稿细节与修改痕迹对应{{revision}}，不伪造用户原画。",
+            "visualQuery": "{{visualSubject}} drawing detail"
+          },
+          {
+            "heading": "回看练习",
+            "body": "{{reflection}}",
+            "seconds": 6,
+            "visualPrompt": "材料和练习纸并排，承载{{reflection}}。",
+            "visualQuery": "{{visualSubject}} workspace"
+          }
+        ]
+      },
+      "example": {
+        "topic": "画一片树叶的观察练习",
+        "values": {
+          "topic": "画一片树叶的观察练习",
+          "inspiration": "先看树叶外轮廓，留意左右并不完全对称。",
+          "rough": "用轻线画大形，再补一条主要叶脉。",
+          "revision": "擦淡过硬的边线，让叶缘变化更自然。",
+          "reflection": "最有用的是观察，不是把每条线画得一样。",
+          "visualSubject": "leaf sketch drawing pencil paper"
+        },
+        "recipe": {
+          "title": "画一片树叶的观察练习",
+          "narration": "先看树叶外轮廓，留意左右并不完全对称。用轻线画大形，再补一条主要叶脉。擦淡过硬的边线，让叶缘变化更自然。最有用的是观察，不是把每条线画得一样。",
+          "tags": [
+            "艺术创作",
+            "画一片树叶的观察练习"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕画一片树叶的观察练习，纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+          "visualStyle": "mixed",
+          "scenes": [
+            {
+              "heading": "先观察",
+              "body": "先看树叶外轮廓，留意左右并不完全对称。",
+              "seconds": 7,
+              "visualPrompt": "材料与空白纸摆在桌面，对应先看树叶外轮廓，留意左右并不完全对称。。",
+              "visualQuery": "leaf sketch drawing pencil paper leaf macro"
+            },
+            {
+              "heading": "落下第一稿",
+              "body": "用轻线画大形，再补一条主要叶脉。",
+              "seconds": 8,
+              "visualPrompt": "原创草图示意表现用轻线画大形，再补一条主要叶脉。；实际过程需自有画面。",
+              "visualQuery": "leaf sketch drawing pencil paper pencil sketch"
+            },
+            {
+              "heading": "看一次修改",
+              "body": "擦淡过硬的边线，让叶缘变化更自然。",
+              "seconds": 7,
+              "visualPrompt": "草稿细节与修改痕迹对应擦淡过硬的边线，让叶缘变化更自然。，不伪造用户原画。",
+              "visualQuery": "leaf sketch drawing pencil paper drawing detail"
+            },
+            {
+              "heading": "回看练习",
+              "body": "最有用的是观察，不是把每条线画得一样。",
+              "seconds": 6,
+              "visualPrompt": "材料和练习纸并排，承载最有用的是观察，不是把每条线画得一样。。",
+              "visualQuery": "leaf sketch drawing pencil paper workspace"
+            }
+          ]
+        }
+      },
+      "mediaPreset": {
+        "id": "shape-lottie",
+        "kind": "lottie",
+        "sceneIndices": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "tech-concept",
+      "name": "技术概念图解",
+      "category": "技术",
+      "description": "用具体需求解释概念、流程与取舍。适合原创关系图与设备照片，不假冒实际产品界面。",
+      "useCases": [
+        "技术",
+        "缓存",
+        "算法"
+      ],
+      "keywords": [
+        "技术",
+        "缓存",
+        "算法",
+        "程序",
+        "软件",
+        "数据库",
+        "tech",
+        "coding"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video",
+        "canvas"
+      ],
+      "style": {
+        "presentationStyle": "explain",
+        "visualStyle": "illustration",
+        "visualTheme": "浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "pacing": "需求入手，过程逐步展开，边界单独说明",
+        "durationSeconds": 29,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。 指定流程幕使用内置Canvas流程动画，按确定时间采样，其他分镜仍可使用照片。"
+      },
+      "structure": [
+        {
+          "id": "need",
+          "heading": "从需求看概念",
+          "purpose": "说明为什么需要它。",
+          "seconds": 6
+        },
+        {
+          "id": "mechanism",
+          "heading": "看基本机制",
+          "purpose": "解释核心概念。",
+          "seconds": 8
+        },
+        {
+          "id": "exampleFlow",
+          "heading": "走一遍流程",
+          "purpose": "用自拟情境串起步骤。",
+          "seconds": 8
+        },
+        {
+          "id": "tradeoff",
+          "heading": "补上边界",
+          "purpose": "解释限制与实现差异。",
+          "seconds": 7
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "用图示理解缓存",
+          "maxLength": 80
+        },
+        {
+          "key": "need",
+          "label": "解决的需求",
+          "required": true,
+          "example": "同一份数据反复使用时，每次重新获取可能增加等待。",
+          "maxLength": 600
+        },
+        {
+          "key": "mechanism",
+          "label": "基本机制",
+          "required": true,
+          "example": "缓存暂存近期可能再用到的数据，后续请求有时可以复用。",
+          "maxLength": 600
+        },
+        {
+          "key": "exampleFlow",
+          "label": "自拟流程",
+          "required": true,
+          "example": "先检查缓存；有合适数据就使用，没有则获取后存入。",
+          "maxLength": 600
+        },
+        {
+          "key": "tradeoff",
+          "label": "限制与取舍",
+          "required": true,
+          "example": "内容可能过期，需要更新和失效规则；具体行为取决于系统设计。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "computer cache data diagram",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{need}}{{mechanism}}{{exampleFlow}}{{tradeoff}}",
+        "tags": [
+          "技术",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "visualStyle": "illustration",
+        "scenes": [
+          {
+            "heading": "从需求看概念",
+            "body": "{{need}}",
+            "seconds": 6,
+            "visualPrompt": "重复请求的原创方框图表现{{need}}，不用虚构性能数字。",
+            "visualQuery": "{{visualSubject}} repeated request"
+          },
+          {
+            "heading": "看基本机制",
+            "body": "{{mechanism}}",
+            "seconds": 8,
+            "visualPrompt": "请求与数据源间的暂存图示对应{{mechanism}}。",
+            "visualQuery": "{{visualSubject}} flow diagram"
+          },
+          {
+            "heading": "走一遍流程",
+            "body": "{{exampleFlow}}",
+            "seconds": 8,
+            "visualPrompt": "流程节点依次高亮表示{{exampleFlow}}。",
+            "visualQuery": "{{visualSubject}} process diagram"
+          },
+          {
+            "heading": "补上边界",
+            "body": "{{tradeoff}}",
+            "seconds": 7,
+            "visualPrompt": "刷新与失效图示对应{{tradeoff}}，仅为概念说明。",
+            "visualQuery": "{{visualSubject}} refresh diagram"
+          }
+        ]
+      },
+      "example": {
+        "topic": "用图示理解缓存",
+        "values": {
+          "topic": "用图示理解缓存",
+          "need": "同一份数据反复使用时，每次重新获取可能增加等待。",
+          "mechanism": "缓存暂存近期可能再用到的数据，后续请求有时可以复用。",
+          "exampleFlow": "先检查缓存；有合适数据就使用，没有则获取后存入。",
+          "tradeoff": "内容可能过期，需要更新和失效规则；具体行为取决于系统设计。",
+          "visualSubject": "computer cache data diagram"
+        },
+        "recipe": {
+          "title": "用图示理解缓存",
+          "narration": "同一份数据反复使用时，每次重新获取可能增加等待。缓存暂存近期可能再用到的数据，后续请求有时可以复用。先检查缓存；有合适数据就使用，没有则获取后存入。内容可能过期，需要更新和失效规则；具体行为取决于系统设计。",
+          "tags": [
+            "技术",
+            "用图示理解缓存"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕用图示理解缓存，浅色背景，清晰关系图、步骤箭头或分类示意。",
+          "visualStyle": "illustration",
+          "scenes": [
+            {
+              "heading": "从需求看概念",
+              "body": "同一份数据反复使用时，每次重新获取可能增加等待。",
+              "seconds": 6,
+              "visualPrompt": "重复请求的原创方框图表现同一份数据反复使用时，每次重新获取可能增加等待。，不用虚构性能数字。",
+              "visualQuery": "computer cache data diagram repeated request"
+            },
+            {
+              "heading": "看基本机制",
+              "body": "缓存暂存近期可能再用到的数据，后续请求有时可以复用。",
+              "seconds": 8,
+              "visualPrompt": "请求与数据源间的暂存图示对应缓存暂存近期可能再用到的数据，后续请求有时可以复用。。",
+              "visualQuery": "computer cache data diagram flow diagram"
+            },
+            {
+              "heading": "走一遍流程",
+              "body": "先检查缓存；有合适数据就使用，没有则获取后存入。",
+              "seconds": 8,
+              "visualPrompt": "流程节点依次高亮表示先检查缓存；有合适数据就使用，没有则获取后存入。。",
+              "visualQuery": "computer cache data diagram process diagram"
+            },
+            {
+              "heading": "补上边界",
+              "body": "内容可能过期，需要更新和失效规则；具体行为取决于系统设计。",
+              "seconds": 7,
+              "visualPrompt": "刷新与失效图示对应内容可能过期，需要更新和失效规则；具体行为取决于系统设计。，仅为概念说明。",
+              "visualQuery": "computer cache data diagram refresh diagram"
+            }
+          ]
+        }
+      },
+      "mediaPreset": {
+        "id": "flow-canvas",
+        "kind": "canvas",
+        "sceneIndices": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "language-practice",
+      "name": "情景语言跟读",
+      "category": "语言学习",
+      "description": "在情境中练习短句、意思与替换表达。需场景图片和清晰旁白，示例句仅用于语言练习。",
+      "useCases": [
+        "英语",
+        "跟读",
+        "口语"
+      ],
+      "keywords": [
+        "英语",
+        "跟读",
+        "口语",
+        "学外语",
+        "language",
+        "english"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "magazine",
+        "visualStyle": "photo",
+        "visualTheme": "留白版面与照片边框，重点短句清楚，字体克制。",
+        "pacing": "短句先听，解释停顿，再替换练习",
+        "durationSeconds": 26,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "context",
+          "heading": "先进入情境",
+          "purpose": "说明使用场景。",
+          "seconds": 5
+        },
+        {
+          "id": "phrase",
+          "heading": "听一句短句",
+          "purpose": "给短句足够朗读时间。",
+          "seconds": 7
+        },
+        {
+          "id": "meaning",
+          "heading": "看意思与语气",
+          "purpose": "解释含义与礼貌程度。",
+          "seconds": 7
+        },
+        {
+          "id": "variation",
+          "heading": "换一个内容练习",
+          "purpose": "指出可替换部分。",
+          "seconds": 7
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "咖啡店的礼貌点单短句",
+          "maxLength": 80
+        },
+        {
+          "key": "context",
+          "label": "对话情境",
+          "required": true,
+          "example": "在咖啡店点单，这只是语言练习示例。",
+          "maxLength": 600
+        },
+        {
+          "key": "phrase",
+          "label": "练习短句",
+          "required": true,
+          "example": "I'd like a small coffee, please.",
+          "maxLength": 600
+        },
+        {
+          "key": "meaning",
+          "label": "意思与提示",
+          "required": true,
+          "example": "意思是：我想要一小杯咖啡，谢谢。这是一种礼貌表达。",
+          "maxLength": 600
+        },
+        {
+          "key": "variation",
+          "label": "可替换部分",
+          "required": true,
+          "example": "把 small coffee 换成想要的饮品，再读一遍，保持礼貌语气。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "coffee shop counter cup",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{context}}{{phrase}}{{meaning}}{{variation}}",
+        "tags": [
+          "语言学习",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，留白版面与照片边框，重点短句清楚，字体克制。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先进入情境",
+            "body": "{{context}}",
+            "seconds": 5,
+            "visualPrompt": "场景相关照片对应{{context}}，不出现未授权品牌。",
+            "visualQuery": "{{visualSubject}} counter scene"
+          },
+          {
+            "heading": "听一句短句",
+            "body": "{{phrase}}",
+            "seconds": 7,
+            "visualPrompt": "单个物品近景，留出一行{{phrase}}的位置。",
+            "visualQuery": "{{visualSubject}} cup close up"
+          },
+          {
+            "heading": "看意思与语气",
+            "body": "{{meaning}}",
+            "seconds": 7,
+            "visualPrompt": "服务场景照片承载{{meaning}}，不模拟真实顾客个人对话。",
+            "visualQuery": "{{visualSubject}} ordering scene"
+          },
+          {
+            "heading": "换一个内容练习",
+            "body": "{{variation}}",
+            "seconds": 7,
+            "visualPrompt": "两个相关物品并排，对应{{variation}}。",
+            "visualQuery": "{{visualSubject}} drinks comparison"
+          }
+        ]
+      },
+      "example": {
+        "topic": "咖啡店的礼貌点单短句",
+        "values": {
+          "topic": "咖啡店的礼貌点单短句",
+          "context": "在咖啡店点单，这只是语言练习示例。",
+          "phrase": "I'd like a small coffee, please.",
+          "meaning": "意思是：我想要一小杯咖啡，谢谢。这是一种礼貌表达。",
+          "variation": "把 small coffee 换成想要的饮品，再读一遍，保持礼貌语气。",
+          "visualSubject": "coffee shop counter cup"
+        },
+        "recipe": {
+          "title": "咖啡店的礼貌点单短句",
+          "narration": "在咖啡店点单，这只是语言练习示例。I'd like a small coffee, please.意思是：我想要一小杯咖啡，谢谢。这是一种礼貌表达。把 small coffee 换成想要的饮品，再读一遍，保持礼貌语气。",
+          "tags": [
+            "语言学习",
+            "咖啡店的礼貌点单短句"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕咖啡店的礼貌点单短句，留白版面与照片边框，重点短句清楚，字体克制。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先进入情境",
+              "body": "在咖啡店点单，这只是语言练习示例。",
+              "seconds": 5,
+              "visualPrompt": "场景相关照片对应在咖啡店点单，这只是语言练习示例。，不出现未授权品牌。",
+              "visualQuery": "coffee shop counter cup counter scene"
+            },
+            {
+              "heading": "听一句短句",
+              "body": "I'd like a small coffee, please.",
+              "seconds": 7,
+              "visualPrompt": "单个物品近景，留出一行I'd like a small coffee, please.的位置。",
+              "visualQuery": "coffee shop counter cup cup close up"
+            },
+            {
+              "heading": "看意思与语气",
+              "body": "意思是：我想要一小杯咖啡，谢谢。这是一种礼貌表达。",
+              "seconds": 7,
+              "visualPrompt": "服务场景照片承载意思是：我想要一小杯咖啡，谢谢。这是一种礼貌表达。，不模拟真实顾客个人对话。",
+              "visualQuery": "coffee shop counter cup ordering scene"
+            },
+            {
+              "heading": "换一个内容练习",
+              "body": "把 small coffee 换成想要的饮品，再读一遍，保持礼貌语气。",
+              "seconds": 7,
+              "visualPrompt": "两个相关物品并排，对应把 small coffee 换成想要的饮品，再读一遍，保持礼貌语气。。",
+              "visualQuery": "coffee shop counter cup drinks comparison"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "interview-profile",
+      "name": "人物访谈短摘",
+      "category": "人物故事",
+      "description": "组织身份、授权原话、工作细节和追问。真实访谈需资料与授权片段；示例人物和话语为自拟。",
+      "useCases": [
+        "访谈",
+        "采访",
+        "人物"
+      ],
+      "keywords": [
+        "访谈",
+        "采访",
+        "人物",
+        "职业故事",
+        "interview",
+        "profile"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "cinema",
+        "visualStyle": "photo",
+        "visualTheme": "全幅主体画面，环境广角与细节交替，色彩自然。",
+        "pacing": "环境建立，原话突出，观察补充",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "identity",
+          "heading": "先认识这个人",
+          "purpose": "交代背景和资料性质。",
+          "seconds": 7
+        },
+        {
+          "id": "quote",
+          "heading": "听一段原话",
+          "purpose": "区分原话与转述。",
+          "seconds": 8
+        },
+        {
+          "id": "observation",
+          "heading": "补一处细节",
+          "purpose": "用观察支撑人物描述。",
+          "seconds": 7
+        },
+        {
+          "id": "question",
+          "heading": "留一个追问",
+          "purpose": "留下深入方向。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "自拟访谈：修复旧木椅的人",
+          "maxLength": 80
+        },
+        {
+          "key": "identity",
+          "label": "人物资料与真实性说明",
+          "required": true,
+          "example": "人物为自拟示例：一位喜欢修复旧木椅的业余爱好者。",
+          "maxLength": 600
+        },
+        {
+          "key": "quote",
+          "label": "有权使用的原话",
+          "required": true,
+          "example": "自拟回答是：先看清木头的状态，再决定怎么修。",
+          "maxLength": 600
+        },
+        {
+          "key": "observation",
+          "label": "工作细节",
+          "required": true,
+          "example": "台上有椅子部件、软布和简单工具，过程从检查开始。",
+          "maxLength": 600
+        },
+        {
+          "key": "question",
+          "label": "结尾追问",
+          "required": true,
+          "example": "我想继续问：什么样的旧物值得花时间留下来？",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "wood chair restoration workshop tools",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{identity}}{{quote}}{{observation}}{{question}}",
+        "tags": [
+          "人物故事",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，全幅主体画面，环境广角与细节交替，色彩自然。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先认识这个人",
+            "body": "{{identity}}",
+            "seconds": 7,
+            "visualPrompt": "工作环境广角对应{{identity}}；人物画面需授权，不冒充身份。",
+            "visualQuery": "{{visualSubject}} workshop"
+          },
+          {
+            "heading": "听一段原话",
+            "body": "{{quote}}",
+            "seconds": 8,
+            "visualPrompt": "工作物件细节承载{{quote}}，可换授权访谈片段。",
+            "visualQuery": "{{visualSubject}} chair detail"
+          },
+          {
+            "heading": "补一处细节",
+            "body": "{{observation}}",
+            "seconds": 7,
+            "visualPrompt": "工作台特写对应{{observation}}。",
+            "visualQuery": "{{visualSubject}} tools close up"
+          },
+          {
+            "heading": "留一个追问",
+            "body": "{{question}}",
+            "seconds": 6,
+            "visualPrompt": "工作台慢慢拉远，承载{{question}}。",
+            "visualQuery": "{{visualSubject}} wide workspace"
+          }
+        ]
+      },
+      "example": {
+        "topic": "自拟访谈：修复旧木椅的人",
+        "values": {
+          "topic": "自拟访谈：修复旧木椅的人",
+          "identity": "人物为自拟示例：一位喜欢修复旧木椅的业余爱好者。",
+          "quote": "自拟回答是：先看清木头的状态，再决定怎么修。",
+          "observation": "台上有椅子部件、软布和简单工具，过程从检查开始。",
+          "question": "我想继续问：什么样的旧物值得花时间留下来？",
+          "visualSubject": "wood chair restoration workshop tools"
+        },
+        "recipe": {
+          "title": "自拟访谈：修复旧木椅的人",
+          "narration": "人物为自拟示例：一位喜欢修复旧木椅的业余爱好者。自拟回答是：先看清木头的状态，再决定怎么修。台上有椅子部件、软布和简单工具，过程从检查开始。我想继续问：什么样的旧物值得花时间留下来？",
+          "tags": [
+            "人物故事",
+            "自拟访谈：修复旧木椅的人"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕自拟访谈：修复旧木椅的人，全幅主体画面，环境广角与细节交替，色彩自然。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先认识这个人",
+              "body": "人物为自拟示例：一位喜欢修复旧木椅的业余爱好者。",
+              "seconds": 7,
+              "visualPrompt": "工作环境广角对应人物为自拟示例：一位喜欢修复旧木椅的业余爱好者。；人物画面需授权，不冒充身份。",
+              "visualQuery": "wood chair restoration workshop tools workshop"
+            },
+            {
+              "heading": "听一段原话",
+              "body": "自拟回答是：先看清木头的状态，再决定怎么修。",
+              "seconds": 8,
+              "visualPrompt": "工作物件细节承载自拟回答是：先看清木头的状态，再决定怎么修。，可换授权访谈片段。",
+              "visualQuery": "wood chair restoration workshop tools chair detail"
+            },
+            {
+              "heading": "补一处细节",
+              "body": "台上有椅子部件、软布和简单工具，过程从检查开始。",
+              "seconds": 7,
+              "visualPrompt": "工作台特写对应台上有椅子部件、软布和简单工具，过程从检查开始。。",
+              "visualQuery": "wood chair restoration workshop tools tools close up"
+            },
+            {
+              "heading": "留一个追问",
+              "body": "我想继续问：什么样的旧物值得花时间留下来？",
+              "seconds": 6,
+              "visualPrompt": "工作台慢慢拉远，承载我想继续问：什么样的旧物值得花时间留下来？。",
+              "visualQuery": "wood chair restoration workshop tools wide workspace"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "myth-check",
+      "name": "创作误区辨析",
+      "category": "误区辨析",
+      "description": "复述说法、看反例、补条件再组织结论。需支持理由，不把个人审美当绝对事实。",
+      "useCases": [
+        "误区",
+        "辟谣",
+        "必须"
+      ],
+      "keywords": [
+        "误区",
+        "辟谣",
+        "必须",
+        "一定",
+        "真假",
+        "myth"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "explain",
+        "visualStyle": "mixed",
+        "visualTheme": "浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "pacing": "说法短，反例具体，结论保留条件",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "claim",
+          "heading": "先复述说法",
+          "purpose": "明确待讨论内容。",
+          "seconds": 6
+        },
+        {
+          "id": "counterexample",
+          "heading": "看一个反例",
+          "purpose": "用不同情况检验说法。",
+          "seconds": 8
+        },
+        {
+          "id": "condition",
+          "heading": "补上条件",
+          "purpose": "限定规则范围。",
+          "seconds": 8
+        },
+        {
+          "id": "takeaway",
+          "heading": "重新组织结论",
+          "purpose": "给出更准确理解。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "画面一定要对称吗",
+          "maxLength": 80
+        },
+        {
+          "key": "claim",
+          "label": "要讨论的说法",
+          "required": true,
+          "example": "要讨论的说法是：好看的画面必须左右对称。",
+          "maxLength": 600
+        },
+        {
+          "key": "counterexample",
+          "label": "反例或不同情况",
+          "required": true,
+          "example": "非对称画面也能通过主体、留白和色彩形成平衡。",
+          "maxLength": 600
+        },
+        {
+          "key": "condition",
+          "label": "成立条件",
+          "required": true,
+          "example": "对称常用于强调秩序，但是否合适还要看表达目的。",
+          "maxLength": 600
+        },
+        {
+          "key": "takeaway",
+          "label": "更准确的结论",
+          "required": true,
+          "example": "不只记一条规则，而是比较不同构图如何改变观看感受。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "photography composition symmetry asymmetry",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{claim}}{{counterexample}}{{condition}}{{takeaway}}",
+        "tags": [
+          "误区辨析",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "visualStyle": "mixed",
+        "scenes": [
+          {
+            "heading": "先复述说法",
+            "body": "{{claim}}",
+            "seconds": 6,
+            "visualPrompt": "原创构图示意表现{{claim}}，只保留关键说法。",
+            "visualQuery": "{{visualSubject}} symmetry example"
+          },
+          {
+            "heading": "看一个反例",
+            "body": "{{counterexample}}",
+            "seconds": 8,
+            "visualPrompt": "对照构图表现{{counterexample}}，不加虚构审美评分。",
+            "visualQuery": "{{visualSubject}} asymmetry example"
+          },
+          {
+            "heading": "补上条件",
+            "body": "{{condition}}",
+            "seconds": 8,
+            "visualPrompt": "构图关系线对应{{condition}}，不同方案均清晰。",
+            "visualQuery": "{{visualSubject}} comparison"
+          },
+          {
+            "heading": "重新组织结论",
+            "body": "{{takeaway}}",
+            "seconds": 6,
+            "visualPrompt": "两个构图轮流成为主体，承载{{takeaway}}。",
+            "visualQuery": "{{visualSubject}} balanced framing"
+          }
+        ]
+      },
+      "example": {
+        "topic": "画面一定要对称吗",
+        "values": {
+          "topic": "画面一定要对称吗",
+          "claim": "要讨论的说法是：好看的画面必须左右对称。",
+          "counterexample": "非对称画面也能通过主体、留白和色彩形成平衡。",
+          "condition": "对称常用于强调秩序，但是否合适还要看表达目的。",
+          "takeaway": "不只记一条规则，而是比较不同构图如何改变观看感受。",
+          "visualSubject": "photography composition symmetry asymmetry"
+        },
+        "recipe": {
+          "title": "画面一定要对称吗",
+          "narration": "要讨论的说法是：好看的画面必须左右对称。非对称画面也能通过主体、留白和色彩形成平衡。对称常用于强调秩序，但是否合适还要看表达目的。不只记一条规则，而是比较不同构图如何改变观看感受。",
+          "tags": [
+            "误区辨析",
+            "画面一定要对称吗"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕画面一定要对称吗，浅色背景，清晰关系图、步骤箭头或分类示意。",
+          "visualStyle": "mixed",
+          "scenes": [
+            {
+              "heading": "先复述说法",
+              "body": "要讨论的说法是：好看的画面必须左右对称。",
+              "seconds": 6,
+              "visualPrompt": "原创构图示意表现要讨论的说法是：好看的画面必须左右对称。，只保留关键说法。",
+              "visualQuery": "photography composition symmetry asymmetry symmetry example"
+            },
+            {
+              "heading": "看一个反例",
+              "body": "非对称画面也能通过主体、留白和色彩形成平衡。",
+              "seconds": 8,
+              "visualPrompt": "对照构图表现非对称画面也能通过主体、留白和色彩形成平衡。，不加虚构审美评分。",
+              "visualQuery": "photography composition symmetry asymmetry asymmetry example"
+            },
+            {
+              "heading": "补上条件",
+              "body": "对称常用于强调秩序，但是否合适还要看表达目的。",
+              "seconds": 8,
+              "visualPrompt": "构图关系线对应对称常用于强调秩序，但是否合适还要看表达目的。，不同方案均清晰。",
+              "visualQuery": "photography composition symmetry asymmetry comparison"
+            },
+            {
+              "heading": "重新组织结论",
+              "body": "不只记一条规则，而是比较不同构图如何改变观看感受。",
+              "seconds": 6,
+              "visualPrompt": "两个构图轮流成为主体，承载不只记一条规则，而是比较不同构图如何改变观看感受。。",
+              "visualQuery": "photography composition symmetry asymmetry balanced framing"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-guide",
+      "name": "方案取舍对比",
+      "category": "对比",
+      "description": "在相同需求下比较两种方案。需填写真实特点，结论按条件选择，不做广告保证。",
+      "useCases": [
+        "对比",
+        "比较",
+        "区别"
+      ],
+      "keywords": [
+        "对比",
+        "比较",
+        "区别",
+        "哪个好",
+        "纸质",
+        "电子笔记",
+        "compare"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "collage",
+        "visualStyle": "photo",
+        "visualTheme": "错位拼贴与局部放大，保留主体关系与前后对照。",
+        "pacing": "先定标准，分别描述，最后按条件选择",
+        "durationSeconds": 29,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "need",
+          "heading": "先定义标准",
+          "purpose": "让两个方案回应同一需求。",
+          "seconds": 6
+        },
+        {
+          "id": "optionA",
+          "heading": "看方案一",
+          "purpose": "说明特点与代价。",
+          "seconds": 8
+        },
+        {
+          "id": "optionB",
+          "heading": "看方案二",
+          "purpose": "用同样维度描述。",
+          "seconds": 8
+        },
+        {
+          "id": "choice",
+          "heading": "按需求取舍",
+          "purpose": "把结论连到条件。",
+          "seconds": 7
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "纸质笔记和电子笔记怎么取舍",
+          "maxLength": 80
+        },
+        {
+          "key": "need",
+          "label": "相同需求",
+          "required": true,
+          "example": "比较随手记录和之后回看这两个需求。",
+          "maxLength": 600
+        },
+        {
+          "key": "optionA",
+          "label": "方案一与特点",
+          "required": true,
+          "example": "纸本能随意写画，但查找旧内容依靠整理。",
+          "maxLength": 600
+        },
+        {
+          "key": "optionB",
+          "label": "方案二与特点",
+          "required": true,
+          "example": "电子笔记便于检索和移动整理，但体验受设备与软件影响。",
+          "maxLength": 600
+        },
+        {
+          "key": "choice",
+          "label": "选择条件",
+          "required": true,
+          "example": "重视手写感受可先试纸本；常查旧内容可先试方便检索的方式。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "paper notebook laptop notes",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{need}}{{optionA}}{{optionB}}{{choice}}",
+        "tags": [
+          "对比",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，错位拼贴与局部放大，保留主体关系与前后对照。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先定义标准",
+            "body": "{{need}}",
+            "seconds": 6,
+            "visualPrompt": "两个方案相关物品并排，对应{{need}}，视觉权重相同。",
+            "visualQuery": "{{visualSubject}} side by side"
+          },
+          {
+            "heading": "看方案一",
+            "body": "{{optionA}}",
+            "seconds": 8,
+            "visualPrompt": "方案一相关物品近景承载{{optionA}}。",
+            "visualQuery": "{{visualSubject}} notebook detail"
+          },
+          {
+            "heading": "看方案二",
+            "body": "{{optionB}}",
+            "seconds": 8,
+            "visualPrompt": "方案二相关物品与原创界面示意，对应{{optionB}}。",
+            "visualQuery": "{{visualSubject}} digital workspace"
+          },
+          {
+            "heading": "按需求取舍",
+            "body": "{{choice}}",
+            "seconds": 7,
+            "visualPrompt": "两个方案同时保留，表现{{choice}}，不设唯一正确选择。",
+            "visualQuery": "{{visualSubject}} choice comparison"
+          }
+        ]
+      },
+      "example": {
+        "topic": "纸质笔记和电子笔记怎么取舍",
+        "values": {
+          "topic": "纸质笔记和电子笔记怎么取舍",
+          "need": "比较随手记录和之后回看这两个需求。",
+          "optionA": "纸本能随意写画，但查找旧内容依靠整理。",
+          "optionB": "电子笔记便于检索和移动整理，但体验受设备与软件影响。",
+          "choice": "重视手写感受可先试纸本；常查旧内容可先试方便检索的方式。",
+          "visualSubject": "paper notebook laptop notes"
+        },
+        "recipe": {
+          "title": "纸质笔记和电子笔记怎么取舍",
+          "narration": "比较随手记录和之后回看这两个需求。纸本能随意写画，但查找旧内容依靠整理。电子笔记便于检索和移动整理，但体验受设备与软件影响。重视手写感受可先试纸本；常查旧内容可先试方便检索的方式。",
+          "tags": [
+            "对比",
+            "纸质笔记和电子笔记怎么取舍"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕纸质笔记和电子笔记怎么取舍，错位拼贴与局部放大，保留主体关系与前后对照。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先定义标准",
+              "body": "比较随手记录和之后回看这两个需求。",
+              "seconds": 6,
+              "visualPrompt": "两个方案相关物品并排，对应比较随手记录和之后回看这两个需求。，视觉权重相同。",
+              "visualQuery": "paper notebook laptop notes side by side"
+            },
+            {
+              "heading": "看方案一",
+              "body": "纸本能随意写画，但查找旧内容依靠整理。",
+              "seconds": 8,
+              "visualPrompt": "方案一相关物品近景承载纸本能随意写画，但查找旧内容依靠整理。。",
+              "visualQuery": "paper notebook laptop notes notebook detail"
+            },
+            {
+              "heading": "看方案二",
+              "body": "电子笔记便于检索和移动整理，但体验受设备与软件影响。",
+              "seconds": 8,
+              "visualPrompt": "方案二相关物品与原创界面示意，对应电子笔记便于检索和移动整理，但体验受设备与软件影响。。",
+              "visualQuery": "paper notebook laptop notes digital workspace"
+            },
+            {
+              "heading": "按需求取舍",
+              "body": "重视手写感受可先试纸本；常查旧内容可先试方便检索的方式。",
+              "seconds": 7,
+              "visualPrompt": "两个方案同时保留，表现重视手写感受可先试纸本；常查旧内容可先试方便检索的方式。，不设唯一正确选择。",
+              "visualQuery": "paper notebook laptop notes choice comparison"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "craft-steps",
+      "name": "手作步骤卡",
+      "category": "手作",
+      "description": "将一个小制作拆成材料、两步操作和检查。需准确步骤与手部画面或折叠图示。",
+      "useCases": [
+        "手作",
+        "手工",
+        "折纸"
+      ],
+      "keywords": [
+        "手作",
+        "手工",
+        "折纸",
+        "制作步骤",
+        "craft",
+        "origami"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "diary",
+        "visualStyle": "mixed",
+        "visualTheme": "纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+        "pacing": "材料快交代，操作慢，检查独立",
+        "durationSeconds": 30,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "materials",
+          "heading": "摆好材料",
+          "purpose": "明确材料工具范围。",
+          "seconds": 5
+        },
+        {
+          "id": "firstStep",
+          "heading": "先折大形",
+          "purpose": "展示第一步。",
+          "seconds": 9
+        },
+        {
+          "id": "secondStep",
+          "heading": "形成口袋",
+          "purpose": "展示关键结构。",
+          "seconds": 9
+        },
+        {
+          "id": "check",
+          "heading": "检查状态",
+          "purpose": "用用途检查成品。",
+          "seconds": 7
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "折一枚简单纸角书签",
+          "maxLength": 80
+        },
+        {
+          "key": "materials",
+          "label": "需要的材料",
+          "required": true,
+          "example": "准备正方形纸，示例不使用刀具或胶水。",
+          "maxLength": 600
+        },
+        {
+          "key": "firstStep",
+          "label": "第一步",
+          "required": true,
+          "example": "沿对角线折成三角形，两角向顶角折，再展开这两角。",
+          "maxLength": 600
+        },
+        {
+          "key": "secondStep",
+          "label": "第二步",
+          "required": true,
+          "example": "顶角上层向下折，两角折回并塞入形成的口袋。",
+          "maxLength": 600
+        },
+        {
+          "key": "check",
+          "label": "完成检查",
+          "required": true,
+          "example": "整理折痕，把书页一角放进口袋，检查纸角是否平整。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "paper corner bookmark folding",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{materials}}{{firstStep}}{{secondStep}}{{check}}",
+        "tags": [
+          "手作",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+        "visualStyle": "mixed",
+        "scenes": [
+          {
+            "heading": "摆好材料",
+            "body": "{{materials}}",
+            "seconds": 5,
+            "visualPrompt": "材料俯拍对应{{materials}}，边角清楚。",
+            "visualQuery": "{{visualSubject}} materials flat lay"
+          },
+          {
+            "heading": "先折大形",
+            "body": "{{firstStep}}",
+            "seconds": 9,
+            "visualPrompt": "原创步骤图表现{{firstStep}}，不同线型表示折痕。",
+            "visualQuery": "{{visualSubject}} first fold diagram"
+          },
+          {
+            "heading": "形成口袋",
+            "body": "{{secondStep}}",
+            "seconds": 9,
+            "visualPrompt": "结构图与箭头表现{{secondStep}}，操作应按实际步骤核对。",
+            "visualQuery": "{{visualSubject}} pocket fold diagram"
+          },
+          {
+            "heading": "检查状态",
+            "body": "{{check}}",
+            "seconds": 7,
+            "visualPrompt": "物件用途近景对应{{check}}，不宣称用户已完成手作。",
+            "visualQuery": "{{visualSubject}} bookmark detail"
+          }
+        ]
+      },
+      "example": {
+        "topic": "折一枚简单纸角书签",
+        "values": {
+          "topic": "折一枚简单纸角书签",
+          "materials": "准备正方形纸，示例不使用刀具或胶水。",
+          "firstStep": "沿对角线折成三角形，两角向顶角折，再展开这两角。",
+          "secondStep": "顶角上层向下折，两角折回并塞入形成的口袋。",
+          "check": "整理折痕，把书页一角放进口袋，检查纸角是否平整。",
+          "visualSubject": "paper corner bookmark folding"
+        },
+        "recipe": {
+          "title": "折一枚简单纸角书签",
+          "narration": "准备正方形纸，示例不使用刀具或胶水。沿对角线折成三角形，两角向顶角折，再展开这两角。顶角上层向下折，两角折回并塞入形成的口袋。整理折痕，把书页一角放进口袋，检查纸角是否平整。",
+          "tags": [
+            "手作",
+            "折一枚简单纸角书签"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕折一枚简单纸角书签，纸张纹理与边框照片，像翻开一本工作或旅行日记。",
+          "visualStyle": "mixed",
+          "scenes": [
+            {
+              "heading": "摆好材料",
+              "body": "准备正方形纸，示例不使用刀具或胶水。",
+              "seconds": 5,
+              "visualPrompt": "材料俯拍对应准备正方形纸，示例不使用刀具或胶水。，边角清楚。",
+              "visualQuery": "paper corner bookmark folding materials flat lay"
+            },
+            {
+              "heading": "先折大形",
+              "body": "沿对角线折成三角形，两角向顶角折，再展开这两角。",
+              "seconds": 9,
+              "visualPrompt": "原创步骤图表现沿对角线折成三角形，两角向顶角折，再展开这两角。，不同线型表示折痕。",
+              "visualQuery": "paper corner bookmark folding first fold diagram"
+            },
+            {
+              "heading": "形成口袋",
+              "body": "顶角上层向下折，两角折回并塞入形成的口袋。",
+              "seconds": 9,
+              "visualPrompt": "结构图与箭头表现顶角上层向下折，两角折回并塞入形成的口袋。，操作应按实际步骤核对。",
+              "visualQuery": "paper corner bookmark folding pocket fold diagram"
+            },
+            {
+              "heading": "检查状态",
+              "body": "整理折痕，把书页一角放进口袋，检查纸角是否平整。",
+              "seconds": 7,
+              "visualPrompt": "物件用途近景对应整理折痕，把书页一角放进口袋，检查纸角是否平整。，不宣称用户已完成手作。",
+              "visualQuery": "paper corner bookmark folding bookmark detail"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "event-recap",
+      "name": "活动现场回顾",
+      "category": "活动",
+      "description": "记录信息、片段、感受和后续安排。真实活动需自有照片或授权片段；示例明确为自拟场景。",
+      "useCases": [
+        "活动",
+        "回顾",
+        "工作坊"
+      ],
+      "keywords": [
+        "活动",
+        "回顾",
+        "工作坊",
+        "展览",
+        "聚会",
+        "event"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "collage",
+        "visualStyle": "photo",
+        "visualTheme": "错位拼贴与局部放大，保留主体关系与前后对照。",
+        "pacing": "环境短开场，片段快切，感受放慢",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "scope",
+          "heading": "先交代活动",
+          "purpose": "说明真实信息或示例性质。",
+          "seconds": 6
+        },
+        {
+          "id": "moments",
+          "heading": "看两个片段",
+          "purpose": "按顺序组织片段。",
+          "seconds": 9
+        },
+        {
+          "id": "response",
+          "heading": "听一个感受",
+          "purpose": "区分反馈与转述。",
+          "seconds": 7
+        },
+        {
+          "id": "next",
+          "heading": "留给下次",
+          "purpose": "用具体改进收尾。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "自拟社区画画工作坊回顾",
+          "maxLength": 80
+        },
+        {
+          "key": "scope",
+          "label": "活动信息与真实性说明",
+          "required": true,
+          "example": "这是自拟的社区画画工作坊，用于展示回顾写法。",
+          "maxLength": 600
+        },
+        {
+          "key": "moments",
+          "label": "两个记录片段",
+          "required": true,
+          "example": "先看大家挑选颜色，再看练习画纸放在一起。",
+          "maxLength": 600
+        },
+        {
+          "key": "response",
+          "label": "感受或授权反馈",
+          "required": true,
+          "example": "自拟感受是：同一种颜色在不同人手里能画出不同东西。",
+          "maxLength": 600
+        },
+        {
+          "key": "next",
+          "label": "后续安排",
+          "required": true,
+          "example": "再组织时会留更多时间，让大家解释自己的观察。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "community art workshop painting table",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{scope}}{{moments}}{{response}}{{next}}",
+        "tags": [
+          "活动",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，错位拼贴与局部放大，保留主体关系与前后对照。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "先交代活动",
+            "body": "{{scope}}",
+            "seconds": 6,
+            "visualPrompt": "活动环境相关广角照片对应{{scope}}，不出现未经授权身份。",
+            "visualQuery": "{{visualSubject}} wide room"
+          },
+          {
+            "heading": "看两个片段",
+            "body": "{{moments}}",
+            "seconds": 9,
+            "visualPrompt": "两组现场细节拼贴对应{{moments}}。",
+            "visualQuery": "{{visualSubject}} painting materials"
+          },
+          {
+            "heading": "听一个感受",
+            "body": "{{response}}",
+            "seconds": 7,
+            "visualPrompt": "活动成果局部承载{{response}}，不伪造真实评价。",
+            "visualQuery": "{{visualSubject}} artwork detail"
+          },
+          {
+            "heading": "留给下次",
+            "body": "{{next}}",
+            "seconds": 6,
+            "visualPrompt": "整理后的环境画面对应{{next}}。",
+            "visualQuery": "{{visualSubject}} empty table"
+          }
+        ]
+      },
+      "example": {
+        "topic": "自拟社区画画工作坊回顾",
+        "values": {
+          "topic": "自拟社区画画工作坊回顾",
+          "scope": "这是自拟的社区画画工作坊，用于展示回顾写法。",
+          "moments": "先看大家挑选颜色，再看练习画纸放在一起。",
+          "response": "自拟感受是：同一种颜色在不同人手里能画出不同东西。",
+          "next": "再组织时会留更多时间，让大家解释自己的观察。",
+          "visualSubject": "community art workshop painting table"
+        },
+        "recipe": {
+          "title": "自拟社区画画工作坊回顾",
+          "narration": "这是自拟的社区画画工作坊，用于展示回顾写法。先看大家挑选颜色，再看练习画纸放在一起。自拟感受是：同一种颜色在不同人手里能画出不同东西。再组织时会留更多时间，让大家解释自己的观察。",
+          "tags": [
+            "活动",
+            "自拟社区画画工作坊回顾"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕自拟社区画画工作坊回顾，错位拼贴与局部放大，保留主体关系与前后对照。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "先交代活动",
+              "body": "这是自拟的社区画画工作坊，用于展示回顾写法。",
+              "seconds": 6,
+              "visualPrompt": "活动环境相关广角照片对应这是自拟的社区画画工作坊，用于展示回顾写法。，不出现未经授权身份。",
+              "visualQuery": "community art workshop painting table wide room"
+            },
+            {
+              "heading": "看两个片段",
+              "body": "先看大家挑选颜色，再看练习画纸放在一起。",
+              "seconds": 9,
+              "visualPrompt": "两组现场细节拼贴对应先看大家挑选颜色，再看练习画纸放在一起。。",
+              "visualQuery": "community art workshop painting table painting materials"
+            },
+            {
+              "heading": "听一个感受",
+              "body": "自拟感受是：同一种颜色在不同人手里能画出不同东西。",
+              "seconds": 7,
+              "visualPrompt": "活动成果局部承载自拟感受是：同一种颜色在不同人手里能画出不同东西。，不伪造真实评价。",
+              "visualQuery": "community art workshop painting table artwork detail"
+            },
+            {
+              "heading": "留给下次",
+              "body": "再组织时会留更多时间，让大家解释自己的观察。",
+              "seconds": 6,
+              "visualPrompt": "整理后的环境画面对应再组织时会留更多时间，让大家解释自己的观察。。",
+              "visualQuery": "community art workshop painting table empty table"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nature-observation",
+      "name": "自然观察笔记",
+      "category": "自然",
+      "description": "记录对象的细节、变化与疑问。需明确观察范围，不把未确认物种或推测当事实。",
+      "useCases": [
+        "自然观察",
+        "树叶",
+        "植物"
+      ],
+      "keywords": [
+        "自然观察",
+        "树叶",
+        "植物",
+        "鸟类",
+        "森林",
+        "nature",
+        "wildlife"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "cinema",
+        "visualStyle": "photo",
+        "visualTheme": "全幅主体画面，环境广角与细节交替，色彩自然。",
+        "pacing": "环境慢进入，微距停留，疑问开放",
+        "durationSeconds": 29,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "context",
+          "heading": "限定观察范围",
+          "purpose": "交代对象与范围。",
+          "seconds": 7
+        },
+        {
+          "id": "detail",
+          "heading": "靠近一个细节",
+          "purpose": "仅描述直接观察。",
+          "seconds": 9
+        },
+        {
+          "id": "change",
+          "heading": "换个角度",
+          "purpose": "用同一对象承接变化。",
+          "seconds": 7
+        },
+        {
+          "id": "question",
+          "heading": "留一个问题",
+          "purpose": "将推测和事实分开。",
+          "seconds": 6
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "观察一片城市树叶",
+          "maxLength": 80
+        },
+        {
+          "key": "context",
+          "label": "观察情境与范围",
+          "required": true,
+          "example": "只观察路边树上一片叶子的外观，不判断具体物种。",
+          "maxLength": 600
+        },
+        {
+          "key": "detail",
+          "label": "直接看到的细节",
+          "required": true,
+          "example": "主叶脉明显，侧脉向边缘延伸，逆光处有不同深浅。",
+          "maxLength": 600
+        },
+        {
+          "key": "change",
+          "label": "变化或对照",
+          "required": true,
+          "example": "正反面反光不同，我尝试用同一角度记录这两种状态。",
+          "maxLength": 600
+        },
+        {
+          "key": "question",
+          "label": "待确认问题",
+          "required": true,
+          "example": "这些差异来自表面结构，还是光线角度？接下来再查资料。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "urban tree leaf veins sunlight",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{context}}{{detail}}{{change}}{{question}}",
+        "tags": [
+          "自然",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，全幅主体画面，环境广角与细节交替，色彩自然。",
+        "visualStyle": "photo",
+        "scenes": [
+          {
+            "heading": "限定观察范围",
+            "body": "{{context}}",
+            "seconds": 7,
+            "visualPrompt": "环境远景对应{{context}}，不写未确认物种名。",
+            "visualQuery": "{{visualSubject}} tree wide view"
+          },
+          {
+            "heading": "靠近一个细节",
+            "body": "{{detail}}",
+            "seconds": 9,
+            "visualPrompt": "自然对象微距对应{{detail}}，主体保持可见。",
+            "visualQuery": "{{visualSubject}} leaf macro"
+          },
+          {
+            "heading": "换个角度",
+            "body": "{{change}}",
+            "seconds": 7,
+            "visualPrompt": "不同视角对照表现{{change}}；相关图示不等于实地记录。",
+            "visualQuery": "{{visualSubject}} leaf comparison"
+          },
+          {
+            "heading": "留一个问题",
+            "body": "{{question}}",
+            "seconds": 6,
+            "visualPrompt": "对象与观察笔记画面承载{{question}}，不编造未知结论。",
+            "visualQuery": "{{visualSubject}} observation journal"
+          }
+        ]
+      },
+      "example": {
+        "topic": "观察一片城市树叶",
+        "values": {
+          "topic": "观察一片城市树叶",
+          "context": "只观察路边树上一片叶子的外观，不判断具体物种。",
+          "detail": "主叶脉明显，侧脉向边缘延伸，逆光处有不同深浅。",
+          "change": "正反面反光不同，我尝试用同一角度记录这两种状态。",
+          "question": "这些差异来自表面结构，还是光线角度？接下来再查资料。",
+          "visualSubject": "urban tree leaf veins sunlight"
+        },
+        "recipe": {
+          "title": "观察一片城市树叶",
+          "narration": "只观察路边树上一片叶子的外观，不判断具体物种。主叶脉明显，侧脉向边缘延伸，逆光处有不同深浅。正反面反光不同，我尝试用同一角度记录这两种状态。这些差异来自表面结构，还是光线角度？接下来再查资料。",
+          "tags": [
+            "自然",
+            "观察一片城市树叶"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕观察一片城市树叶，全幅主体画面，环境广角与细节交替，色彩自然。",
+          "visualStyle": "photo",
+          "scenes": [
+            {
+              "heading": "限定观察范围",
+              "body": "只观察路边树上一片叶子的外观，不判断具体物种。",
+              "seconds": 7,
+              "visualPrompt": "环境远景对应只观察路边树上一片叶子的外观，不判断具体物种。，不写未确认物种名。",
+              "visualQuery": "urban tree leaf veins sunlight tree wide view"
+            },
+            {
+              "heading": "靠近一个细节",
+              "body": "主叶脉明显，侧脉向边缘延伸，逆光处有不同深浅。",
+              "seconds": 9,
+              "visualPrompt": "自然对象微距对应主叶脉明显，侧脉向边缘延伸，逆光处有不同深浅。，主体保持可见。",
+              "visualQuery": "urban tree leaf veins sunlight leaf macro"
+            },
+            {
+              "heading": "换个角度",
+              "body": "正反面反光不同，我尝试用同一角度记录这两种状态。",
+              "seconds": 7,
+              "visualPrompt": "不同视角对照表现正反面反光不同，我尝试用同一角度记录这两种状态。；相关图示不等于实地记录。",
+              "visualQuery": "urban tree leaf veins sunlight leaf comparison"
+            },
+            {
+              "heading": "留一个问题",
+              "body": "这些差异来自表面结构，还是光线角度？接下来再查资料。",
+              "seconds": 6,
+              "visualPrompt": "对象与观察笔记画面承载这些差异来自表面结构，还是光线角度？接下来再查资料。，不编造未知结论。",
+              "visualQuery": "urban tree leaf veins sunlight observation journal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "data-story",
+      "name": "小数据图解",
+      "category": "数据",
+      "description": "将用户数据组织成来源、比较、解读和限制。示例为自拟数据；真实数字必须填写来源与统计范围。",
+      "useCases": [
+        "数据",
+        "统计",
+        "图表"
+      ],
+      "keywords": [
+        "数据",
+        "统计",
+        "图表",
+        "投票",
+        "问卷",
+        "data",
+        "chart"
+      ],
+      "mediaKinds": [
+        "photo",
+        "png",
+        "video"
+      ],
+      "style": {
+        "presentationStyle": "explain",
+        "visualStyle": "illustration",
+        "visualTheme": "浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "pacing": "来源先说，比较清楚，限制不省略",
+        "durationSeconds": 28,
+        "mediaGuide": "可用授权照片、PNG图示或用户提供的视频。扩展格式按本模板的受控内置素材预设适配，不代表任意外部文件都能直接导入。"
+      },
+      "structure": [
+        {
+          "id": "sourceScope",
+          "heading": "数据从哪来",
+          "purpose": "明确来源、单位与范围。",
+          "seconds": 6
+        },
+        {
+          "id": "data",
+          "heading": "数字放在一起",
+          "purpose": "展示完整数字与分类。",
+          "seconds": 8
+        },
+        {
+          "id": "reading",
+          "heading": "读出支持的结论",
+          "purpose": "限定结论范围。",
+          "seconds": 7
+        },
+        {
+          "id": "limitation",
+          "heading": "说清限制",
+          "purpose": "避免扩大样本结论。",
+          "seconds": 7
+        }
+      ],
+      "fields": [
+        {
+          "key": "topic",
+          "label": "作品主题",
+          "required": true,
+          "example": "自拟六人记录方式小调查",
+          "maxLength": 80
+        },
+        {
+          "key": "sourceScope",
+          "label": "来源与统计范围",
+          "required": true,
+          "example": "这是自拟示例：六位虚构参与者选择常用的记录方式。",
+          "maxLength": 600
+        },
+        {
+          "key": "data",
+          "label": "完整数字与单位",
+          "required": true,
+          "example": "示例四人选择纸本，两人选择电子笔记，总计六人。",
+          "maxLength": 600
+        },
+        {
+          "key": "reading",
+          "label": "直接支持的结果",
+          "required": true,
+          "example": "这个自拟小组里选择纸本的较多，这只描述这六人的选择。",
+          "maxLength": 600
+        },
+        {
+          "key": "limitation",
+          "label": "限制与下一步",
+          "required": true,
+          "example": "样本很小且非随机，不能推断所有人；真实调查需记录方法与来源。",
+          "maxLength": 600
+        },
+        {
+          "key": "visualSubject",
+          "label": "画面英文检索词",
+          "required": true,
+          "example": "notebook survey bar chart illustration",
+          "maxLength": 100
+        }
+      ],
+      "recipeTemplate": {
+        "title": "{{topic}}",
+        "narration": "{{sourceScope}}{{data}}{{reading}}{{limitation}}",
+        "tags": [
+          "数据",
+          "{{topic}}"
+        ],
+        "language": "zh",
+        "visualTheme": "围绕{{topic}}，浅色背景，清晰关系图、步骤箭头或分类示意。",
+        "visualStyle": "illustration",
+        "scenes": [
+          {
+            "heading": "数据从哪来",
+            "body": "{{sourceScope}}",
+            "seconds": 6,
+            "visualPrompt": "简洁符号对应{{sourceScope}}，不用真实人物身份。",
+            "visualQuery": "{{visualSubject}} survey illustration"
+          },
+          {
+            "heading": "数字放在一起",
+            "body": "{{data}}",
+            "seconds": 8,
+            "visualPrompt": "原创图示按{{data}}匹配类别和数量，不预制错配数字图。",
+            "visualQuery": "{{visualSubject}} bar chart comparison"
+          },
+          {
+            "heading": "读出支持的结论",
+            "body": "{{reading}}",
+            "seconds": 7,
+            "visualPrompt": "分类物品与对比关系对应{{reading}}，不加虚构显著性。",
+            "visualQuery": "{{visualSubject}} categories"
+          },
+          {
+            "heading": "说清限制",
+            "body": "{{limitation}}",
+            "seconds": 7,
+            "visualPrompt": "范围框与记录表表现{{limitation}}。",
+            "visualQuery": "{{visualSubject}} method diagram"
+          }
+        ]
+      },
+      "example": {
+        "topic": "自拟六人记录方式小调查",
+        "values": {
+          "topic": "自拟六人记录方式小调查",
+          "sourceScope": "这是自拟示例：六位虚构参与者选择常用的记录方式。",
+          "data": "示例四人选择纸本，两人选择电子笔记，总计六人。",
+          "reading": "这个自拟小组里选择纸本的较多，这只描述这六人的选择。",
+          "limitation": "样本很小且非随机，不能推断所有人；真实调查需记录方法与来源。",
+          "visualSubject": "notebook survey bar chart illustration"
+        },
+        "recipe": {
+          "title": "自拟六人记录方式小调查",
+          "narration": "这是自拟示例：六位虚构参与者选择常用的记录方式。示例四人选择纸本，两人选择电子笔记，总计六人。这个自拟小组里选择纸本的较多，这只描述这六人的选择。样本很小且非随机，不能推断所有人；真实调查需记录方法与来源。",
+          "tags": [
+            "数据",
+            "自拟六人记录方式小调查"
+          ],
+          "language": "zh",
+          "visualTheme": "围绕自拟六人记录方式小调查，浅色背景，清晰关系图、步骤箭头或分类示意。",
+          "visualStyle": "illustration",
+          "scenes": [
+            {
+              "heading": "数据从哪来",
+              "body": "这是自拟示例：六位虚构参与者选择常用的记录方式。",
+              "seconds": 6,
+              "visualPrompt": "简洁符号对应这是自拟示例：六位虚构参与者选择常用的记录方式。，不用真实人物身份。",
+              "visualQuery": "notebook survey bar chart illustration survey illustration"
+            },
+            {
+              "heading": "数字放在一起",
+              "body": "示例四人选择纸本，两人选择电子笔记，总计六人。",
+              "seconds": 8,
+              "visualPrompt": "原创图示按示例四人选择纸本，两人选择电子笔记，总计六人。匹配类别和数量，不预制错配数字图。",
+              "visualQuery": "notebook survey bar chart illustration bar chart comparison"
+            },
+            {
+              "heading": "读出支持的结论",
+              "body": "这个自拟小组里选择纸本的较多，这只描述这六人的选择。",
+              "seconds": 7,
+              "visualPrompt": "分类物品与对比关系对应这个自拟小组里选择纸本的较多，这只描述这六人的选择。，不加虚构显著性。",
+              "visualQuery": "notebook survey bar chart illustration categories"
+            },
+            {
+              "heading": "说清限制",
+              "body": "样本很小且非随机，不能推断所有人；真实调查需记录方法与来源。",
+              "seconds": 7,
+              "visualPrompt": "范围框与记录表表现样本很小且非随机，不能推断所有人；真实调查需记录方法与来源。。",
+              "visualQuery": "notebook survey bar chart illustration method diagram"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
