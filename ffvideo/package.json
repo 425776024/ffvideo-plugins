@@ -17,7 +17,10 @@
     "hosts",
     "templates",
     "README.md",
-    "design/PRODUCTION_SYSTEM.md"
+    "design/PRODUCTION_SYSTEM.md",
+    "README-zh.md",
+    "docs",
+    "assets/docs"
   ],
   "scripts": {
     "dev": "node scripts/dev.mjs",

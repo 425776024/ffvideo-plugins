@@ -1,21 +1,27 @@
-# ffvideo-plugins
+# ffvideo
 
-Turn topics into local video drafts with narration, captions and agent feedback.
+[Chinese](README-zh.md) · [Website](https://ffclip.com)
 
-## 从源码运行
+Give your AI assistant a topic. Watch narrated video drafts, leave comments, and export.
 
-Node.js 22 或更高版本：
+<img src="ffvideo/assets/docs/ffvideo-demo.jpg" alt="ffvideo running a built-in narrated work" width="390">
 
-```sh
-git clone https://github.com/425776024/ffvideo-plugins.git
-cd ffvideo-plugins
-npm install
-npm run build
-node ffvideo/dist/bin/ffvideo.mjs --open
+- Turn a topic into narrated drafts with an AI assistant.
+- Watch a simple gallery with captions and playback controls.
+- Reuse templates, leave feedback and export your videos.
+
+## Copy this into your AI assistant
+
+```text
+Install ffvideo from https://github.com/425776024/ffvideo-plugins. Set it up for this assistant, preserve my existing settings, and open the built-in video gallery in my browser. Use Node.js 22 or newer. If a new tool connection needs a restart, open the gallery with the CLI first. Show the bundled works before generating anything new.
 ```
 
-[完整使用说明](ffvideo/README.md) · [宿主插件](ffvideo/plugins/README.md) · [MIT 许可证](LICENSE) · [第三方声明](THIRD_PARTY_NOTICES.md)
+## Or install and try it in one command
 
-`ffvideo/` 保存产品源码、插件、技能和测试。`packages/`、`src/`、`scripts/` 与 `native/` 保存从 [ffclip-plugins](https://github.com/425776024/ffclip-plugins) 复用的共享引擎及构建支持，保持既有相对导入，使本仓库可独立构建。文本 WASM 同时包含源码、预编译运行时和哈希记录，重编译见 [text-wasm](packages/text-wasm/README.md)。
+```sh
+npm install -g @ffclip-com/ffvideo@latest && ffvideo --provider agent --open
+```
 
-官网 `ffclip/` 源码、开发者本地数据和旧 Git 历史未包含在本仓库，也不在 MIT 授权范围内。模型权重另行下载并遵循各自许可。
+Requires Node.js 22+ and Chrome or Edge. Five narrated examples are included; no model download is needed to watch them. Connect an assistant to create new works.
+
+[Usage guide](ffvideo/docs/usage-en.md) · [MIT](LICENSE)
