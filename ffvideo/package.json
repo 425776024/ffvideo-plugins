@@ -1,6 +1,6 @@
 {
   "name": "@ffclip-com/ffvideo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Personal video drafts with sound, local topic and history playback and agent event bridges",
   "type": "module",
   "license": "MIT",

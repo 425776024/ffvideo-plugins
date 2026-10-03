@@ -1,6 +1,6 @@
 {
   "name": "ffvideo-local",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Generate voiced topic videos and watch a read-only topic and history library.",
   "author": {
     "name": "ffclip"

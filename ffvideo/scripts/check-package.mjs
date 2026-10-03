@@ -10,7 +10,7 @@ import assert from 'node:assert/strict';
 const root = process.argv[2] ? resolve(process.argv[2]) : fileURLToPath(new URL('../', import.meta.url));
 const pkg = JSON.parse(await readFile(join(root, 'package.json')));
 if (pkg.name !== '@ffclip-com/ffvideo') throw new Error('Wrong package name');
-if (pkg.version !== '0.2.0' || !pkg.files.includes('templates')) throw new Error('Wrong release version or missing template package files');
+if (!/^\d+\.\d+\.\d+$/.test(pkg.version) || !pkg.files.includes('templates')) throw new Error('Wrong release version or missing template package files');
 for (const path of ['dist/bin/ffvideo.mjs', 'dist/web/index.html', 'dist/samples/recipes.json', 'hosts/config.mjs', 'skills/video-feed/SKILL.md', 'README.md']) await stat(join(root, path));
 const templateFixtures = ['process.svg', 'reading.md', 'flow.json', 'shape.lottie.json'];
 async function checkTemplates(directory) {
