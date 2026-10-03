@@ -1,6 +1,6 @@
 # @ffclip-com/ffvideo
 
-源码：[ffvideo-plugins](https://github.com/425776024/ffvideo-plugins)，采用 [MIT](LICENSE) 许可证。官网 `ffclip/` 不在开源范围内。
+源码：[ffvideo-plugins](https://github.com/425776024/ffvideo-plugins)，采用 [MIT](../LICENSE) 许可证。官网 `ffclip/` 不在开源范围内。
 
 ffvideo 把一个感兴趣的话题变成有声音的竖屏草稿，用户只需要观看、评论和导出。它是独立入口，直接复用当前项目的 VideoCut 项目格式、渲染器、音频时钟、配音与导出实现；不复制编辑器，也不挂载时间轴、画布选择或拖拽控件。
 
@@ -18,7 +18,7 @@ macOS 配音在本机合成，中文随机轮换已安装的婷婷和美佳，�
 
 本地素材库存只在相关时帮助减少重复下载，不要求用户的随机话题迁就库存。素材以内容哈希去重，支持跨作品、同义查询离线复用；缺失具体主体时按话题联网检索。草稿文件与共享原件独立，支持的文件系统采用写时复制。不会额外调用模型翻做全部旧作品。
 
-MCP `list_reusable_materials({topic?,limit?})` 让不同宿主读取同一库存。已有完成作品的素材在启动时离线导入。复用对象是原始素材和底层制作能力；成片镜头关系、说明方式及节奏必须重新创作。换色、换文字、换素材或挪动几像素无法绕过结构重复检查。完整设计见 [制作系统](design/PRODUCTION_SYSTEM.md)。
+MCP `list_reusable_materials({topic?,limit?})` 让不同宿主读取同一库存。已有完成作品的素材在启动时离线导入。复用对象是原始素材和底层制作能力；成片镜头关系、说明方式及节奏必须重新创作。换色、换文字、换素材或挪动几像素无法绕过结构重复检查。完整设计见 [制作系统](../design/PRODUCTION_SYSTEM.md)。
 
 这保证缓存复用和结构底线，不等于每条成片都达到艺术质量；实际素材质量、语义对应和镜头表达仍需验收。
 
@@ -45,7 +45,7 @@ node ffvideo/dist/bin/ffvideo.mjs --open
 
 ## 填写、复制和改写模板
 
-内置 20 个场景模板覆盖科普、口播、教学、游戏复盘、户外、旅行、美食、演示、历史、读书、创作、技术、语言练习、采访、误区、对比、手作、活动、自然和数据图解。每个都有中文用途、填写字段、3–5 幕结构和完整示例。模板库说明与原始字段见 [templates/README.md](templates/README.md)。
+内置 20 个场景模板覆盖科普、口播、教学、游戏复盘、户外、旅行、美食、演示、历史、读书、创作、技术、语言练习、采访、误区、对比、手作、活动、自然和数据图解。每个都有中文用途、填写字段、3–5 幕结构和完整示例。模板库说明与原始字段见 [templates/README.md](../templates/README.md)。
 
 AI 宿主可以使用这些 MCP 工具：
 
@@ -102,7 +102,7 @@ node ffvideo/dist/bin/ffvideo.mjs --print-host-config workbuddy
 node ffvideo/dist/bin/ffvideo.mjs --print-host-config qoder
 ```
 
-这些命令打印当前本地构建的可用配置，不修改宿主设置。安装包发布后可使用 `npx -y @ffclip-com/ffvideo --mcp`。`dist/plugins/codex` 和 `dist/plugins/claude` 是包含运行时与技能的插件根；其余宿主使用同一 MCP 工具和 video-feed 技能，具体配置见 [hosts/README.md](hosts/README.md)。同一个作品库只允许一个服务进程，可复用正在运行服务的 HTTP `/mcp` 端点；独立 stdio 服务请指定不同数据目录。
+这些命令打印当前本地构建的可用配置，不修改宿主设置。安装包发布后可使用 `npx -y @ffclip-com/ffvideo --mcp`。`dist/plugins/codex` 和 `dist/plugins/claude` 是包含运行时与技能的插件根；其余宿主使用同一 MCP 工具和 video-feed 技能，具体配置见 [hosts/README.md](../hosts/README.md)。同一个作品库只允许一个服务进程，可复用正在运行服务的 HTTP `/mcp` 端点；独立 stdio 服务请指定不同数据目录。
 
 | 宿主 | 普通接入 | 实时反馈的实现边界 |
 | --- | --- | --- |
