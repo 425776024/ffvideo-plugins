@@ -14,7 +14,7 @@ npm install -g @ffclip-com/ffvideo@latest && ffvideo --provider agent --open
 
 [英文](README.md) · [官网](https://ffclip.com)
 
-<img src="assets/docs/ffvideo-demo.jpg" alt="插件实际运行：内置有声作品展示页面" width="390">
+<img src="assets/docs/ffvideo-demo.png" alt="插件实际运行：内置有声作品展示页面" width="390">
 
 告诉 AI 助手一个话题，观看有配音、字幕的作品，评论并导出。
 

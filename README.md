@@ -14,7 +14,7 @@ npm install -g @ffclip-com/ffvideo@latest && ffvideo --provider agent --open
 
 [Chinese](README-zh.md) · [Website](https://ffclip.com)
 
-<img src="ffvideo/assets/docs/ffvideo-demo.jpg" alt="ffvideo running a built-in narrated work" width="390">
+<img src="ffvideo/assets/docs/ffvideo-demo.png" alt="ffvideo running a built-in narrated work" width="390">
 
 Give your AI assistant a topic. Watch narrated video drafts, leave comments, and export.
 
