@@ -1,8 +1,9 @@
 import { StringDecoder } from 'node:string_decoder';
+import packageInfo from '../package.json' with { type: 'json' };
 import { listTemplates, getTemplate, instantiateTemplate } from './templates.mjs';
 import { DESIGN_SCHEMA } from './direction.mjs';
 
-const VERSION = '0.2.0';
+const VERSION = packageInfo.version;
 const PROTOCOL = '2024-11-05';
 const MAX_MESSAGE_BYTES = 1024 * 1024;
 const CHANNEL_EVENT_TYPES = new Set(['preferences', 'feed', 'queue', 'work', 'samples', 'comment', 'clear']);
